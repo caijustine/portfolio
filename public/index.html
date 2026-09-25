@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cailin Justine | Software Developer</title>
 <meta name="description" content="Portfolio of Cailin Justine, a full stack software developer. Web apps, websites, and services.">
+<link rel="stylesheet" href="site.css">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -24,11 +25,11 @@
 </style>
 </helmet>
 
-<div style="font-family: 'Jost', system-ui, sans-serif; background: #14120F; color: #F6F1E8; height: 100vh; display: flex; flex-direction: column; overflow: hidden">
+<div class="home-shell" style="font-family: 'Jost', system-ui, sans-serif; background: #14120F; color: #F6F1E8; height: 100vh; display: flex; flex-direction: column; overflow: hidden">
 
-  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #F1EBE1; color: #211E1A; padding: 10px clamp(18px, 4vw, 44px)">
+  <header class="site-header" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #F1EBE1; color: #211E1A; padding: 10px clamp(18px, 4vw, 44px)">
     <a href="#top" style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; letter-spacing: 0.01em; white-space: nowrap">Cailin Justine</a>
-    <nav style="display: flex; align-items: center; gap: clamp(18px, 4vw, 54px); font-size: clamp(10px, 1.1vw, 12px); font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase">
+    <nav class="site-nav" style="display: flex; align-items: center; gap: clamp(18px, 4vw, 54px); font-size: clamp(10px, 1.1vw, 12px); font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase">
       <a href="work.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Work</a>
       <a href="about.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">About</a>
       <a href="services.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Services</a>
@@ -36,13 +37,13 @@
     </nav>
   </header>
 
-  <section id="top" data-screen-label="Hero" style="position: relative; flex: 1; min-height: 0; display: flex; align-items: center; background: #1B1815; overflow: hidden">
+  <section id="top" class="home-hero" data-screen-label="Hero" style="position: relative; flex: 1; min-height: 0; display: flex; align-items: center; background: #1B1815; overflow: hidden">
     <div style="position: absolute; inset: 0">
       <img src="assets/hero-bg.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
     </div>
     <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(14,12,10,0.86) 0%, rgba(14,12,10,0.66) 48%, rgba(14,12,10,0.5) 100%); pointer-events: none"></div>
 
-    <div style="position: relative; width: 100%; height: 100%; min-height: 0; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); align-items: stretch; gap: clamp(24px, 5vw, 64px); padding: clamp(12px, 3vh, 56px) clamp(20px, 4.5vw, 56px); pointer-events: none">
+    <div class="home-hero-grid" style="position: relative; width: 100%; height: 100%; min-height: 0; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr); align-items: stretch; gap: clamp(24px, 5vw, 64px); padding: clamp(12px, 3vh, 56px) clamp(20px, 4.5vw, 56px); pointer-events: none">
 
       <div style="max-width: 660px; min-height: 0; display: flex; flex-direction: column; justify-content: center">
         <div style="position: relative; pointer-events: auto; flex: 0 1 auto; height: min(36vh, 340px); min-height: 80px; width: min(100%, 290px); border: 1px solid rgba(248,244,236,0.55); background: rgba(14,12,10,0.4)">
@@ -66,7 +67,7 @@
         </div>
       </div>
 
-      <div style="justify-self: end; align-self: center; min-height: 0; display: flex; flex-direction: column; align-items: flex-end; gap: clamp(18px, 4.5vh, 48px); padding-right: clamp(0px, 1vw, 16px)">
+      <div class="home-hero-art" style="justify-self: end; align-self: center; min-height: 0; display: flex; flex-direction: column; align-items: flex-end; gap: clamp(18px, 4.5vh, 48px); padding-right: clamp(0px, 1vw, 16px)">
         <img src="assets/software-developer.png" alt="Software developer" style="display: block; width: clamp(260px, 40vw, 600px); max-height: 48vh; height: auto; object-fit: contain; margin-right: clamp(-24px, -1.5vw, 0px)">
       </div>
 
@@ -158,7 +159,7 @@
     </div>
   </section>
 
-  <footer id="contact" data-screen-label="Footer" style="background: #14120F; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 20px; padding: clamp(9px, 1.8vh, 24px) clamp(20px, 4vw, 56px)">
+  <footer class="site-footer" id="contact" data-screen-label="Footer" style="background: #14120F; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 20px; padding: clamp(9px, 1.8vh, 24px) clamp(20px, 4vw, 56px)">
     <div style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(28px, 4vw, 44px); line-height: 1.1; color: #F6F1E8">Cailin Justine</div>
     <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.26em; text-transform: uppercase; color: rgba(246,241,232,0.78); text-align: center">Let's build something great.</div>
     <div style="display: flex; justify-content: flex-end; align-items: center; gap: clamp(14px, 2.2vw, 26px)">

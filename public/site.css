@@ -1,0 +1,89 @@
+/* Responsive overrides. Page layout is written as inline styles, so these
+   rules use !important to win over them at small widths. */
+
+/* ---------- Header: logo on its own row, nav spread across below ---------- */
+@media (max-width: 640px) {
+  .site-header {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    row-gap: 2px !important;
+    padding-top: 8px !important;
+    padding-bottom: 6px !important;
+  }
+  .site-nav {
+    width: 100% !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    font-size: 11px !important;
+    letter-spacing: 0.16em !important;
+  }
+  .site-nav a {
+    padding: 10px 0 !important; /* bigger tap targets */
+  }
+}
+
+/* ---------- Footer: stack and center ---------- */
+@media (max-width: 640px) {
+  .site-footer {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+    gap: 14px !important;
+    padding-top: 24px !important;
+    padding-bottom: calc(24px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+  footer.site-footer:not([style*="grid"]) {
+    flex-direction: column !important;
+  }
+  .site-footer > div:last-child {
+    justify-content: center !important;
+  }
+}
+
+/* ---------- Home: let the page scroll instead of clipping at 100vh ---------- */
+@media (max-width: 760px) {
+  .home-shell {
+    height: auto !important;
+    min-height: 100svh !important;
+    overflow: visible !important;
+  }
+  .home-hero {
+    flex: 0 0 auto !important;
+  }
+  .home-hero-grid {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    padding-top: 28px !important;
+    padding-bottom: 36px !important;
+    row-gap: 8px !important;
+  }
+  /* "Software developer" script: move below the intro instead of overlapping it */
+  .home-hero-art {
+    justify-self: center !important;
+    align-items: center !important;
+    padding-right: 0 !important;
+    order: -1;
+  }
+  .home-hero-art img {
+    width: min(78vw, 360px) !important;
+    max-height: none !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* ---------- About: one timeline entry per row ---------- */
+@media (max-width: 640px) {
+  .story-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .story-grid > div {
+    padding-right: 0 !important;
+  }
+}
+
+/* ---------- Project: sidebar above the write-up ---------- */
+@media (max-width: 720px) {
+  .project-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

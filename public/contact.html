@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Contact | Cailin Justine</title>
 <meta name="description" content="Portfolio of Cailin Justine, a full stack software developer. Web apps, websites, and services.">
+<link rel="stylesheet" href="site.css">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -26,9 +27,9 @@
 
 <div style="font-family: 'Jost', system-ui, sans-serif; background: #14120F; color: #F6F1E8; min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden">
 
-  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #F1EBE1; color: #211E1A; padding: 10px clamp(18px, 4vw, 44px)">
+  <header class="site-header" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #F1EBE1; color: #211E1A; padding: 10px clamp(18px, 4vw, 44px)">
     <a href="index.html" style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; white-space: nowrap">Cailin Justine</a>
-    <nav style="display: flex; align-items: center; gap: clamp(14px, 3.4vw, 48px); font-size: clamp(10px, 1.1vw, 12px); letter-spacing: 0.22em; text-transform: uppercase">
+    <nav class="site-nav" style="display: flex; align-items: center; gap: clamp(14px, 3.4vw, 48px); font-size: clamp(10px, 1.1vw, 12px); letter-spacing: 0.22em; text-transform: uppercase">
       <a href="work.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Work</a>
       <a href="about.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">About</a>
       <a href="services.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Services</a>
@@ -151,7 +152,7 @@
     </div>
   </section>
 
-  <footer style="background: #14120F; border-top: 1px solid rgba(246,241,232,0.14); display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: clamp(14px, 3vh, 24px) clamp(20px, 4vw, 56px)">
+  <footer class="site-footer" style="background: #14120F; border-top: 1px solid rgba(246,241,232,0.14); display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: clamp(14px, 3vh, 24px) clamp(20px, 4vw, 56px)">
     <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.26em; text-transform: uppercase; color: rgba(246,241,232,0.78)">Let's build something great.</div>
     <div style="display: flex; align-items: center; gap: clamp(14px, 2.2vw, 26px)">
       <a href="https://github.com/caijustine" target="_blank" rel="noopener" aria-label="GitHub" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">

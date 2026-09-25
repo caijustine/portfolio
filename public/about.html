@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About | Cailin Justine</title>
 <meta name="description" content="Portfolio of Cailin Justine, a full stack software developer. Web apps, websites, and services.">
+<link rel="stylesheet" href="site.css">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -25,9 +26,9 @@
 
 <div style="font-family: 'Jost', system-ui, sans-serif; background: #14120F; color: #F6F1E8; min-height: 100vh; overflow-x: hidden">
 
-  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #F1EBE1; color: #211E1A; padding: 10px clamp(18px, 4vw, 44px)">
+  <header class="site-header" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #F1EBE1; color: #211E1A; padding: 10px clamp(18px, 4vw, 44px)">
     <a href="index.html" style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; white-space: nowrap">Cailin Justine</a>
-    <nav style="display: flex; align-items: center; gap: clamp(14px, 3.4vw, 48px); font-size: clamp(10px, 1.1vw, 12px); letter-spacing: 0.22em; text-transform: uppercase">
+    <nav class="site-nav" style="display: flex; align-items: center; gap: clamp(14px, 3.4vw, 48px); font-size: clamp(10px, 1.1vw, 12px); letter-spacing: 0.22em; text-transform: uppercase">
       <a href="work.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Work</a>
       <a href="about.html" style="padding: 6px 0; border-bottom: 1px solid #211E1A">About</a>
       <a href="services.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Services</a>
@@ -98,7 +99,7 @@
     <div style="max-width: 1100px; margin: 0 auto">
       <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.3em; text-transform: uppercase; color: rgba(246,241,232,0.65)">My story</div>
       <h2 style="margin: 16px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.1; color: #F8F4EC">A little about me</h2>
-      <div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: clamp(36px, 6vh, 48px) 0; margin-top: clamp(36px, 6vh, 56px)">
+      <div class="story-grid" style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: clamp(36px, 6vh, 48px) 0; margin-top: clamp(36px, 6vh, 56px)">
         <div style="position: relative; padding: 34px clamp(16px, 2.6vw, 34px) 0 0; border-top: 2px solid rgba(241,235,225,0.4)">
           <span style="position: absolute; top: -9px; left: 0; width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; border: 2px solid #F1EBE1; background: #14120F; box-shadow: 0 0 0 5px #14120F"></span>
           <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.02em">
@@ -224,7 +225,7 @@
     </div>
   </section>
 
-  <footer style="background: #F1EBE1; color: #211E1A; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 20px; padding: clamp(14px, 3vh, 26px) clamp(20px, 4vw, 56px)">
+  <footer class="site-footer" style="background: #F1EBE1; color: #211E1A; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 20px; padding: clamp(14px, 3vh, 26px) clamp(20px, 4vw, 56px)">
     <a href="index.html" style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(28px, 4vw, 44px); line-height: 1.1">Cailin Justine</a>
     <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.26em; text-transform: uppercase; color: #3A342E; text-align: center">Let's build something great.</div>
     <div style="display: flex; justify-content: flex-end; align-items: center; gap: clamp(14px, 2.2vw, 26px)">
