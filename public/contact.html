@@ -69,13 +69,17 @@
         <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
           <div style="margin-top: 28px; padding: 20px 0; border-top: 1px solid rgba(246,241,232,0.16)">
             <div style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(20px, 2.2vw, 24px); color: #F8F4EC">Thanks, {{ firstName }}.</div>
-            <p style="margin: 10px 0 0; font-size: clamp(13px, 1.3vw, 15px); font-weight: 300; line-height: 1.7; color: rgba(246,241,232,0.85)">Your email app should open with your message filled in. Hit send there and I’ll get back to you. If it didn’t open, email me at cailinjustine@gmail.com.</p>
+            <p style="margin: 10px 0 0; font-size: clamp(13px, 1.3vw, 15px); font-weight: 300; line-height: 1.7; color: rgba(246,241,232,0.85)">Your message is on its way. I’ll get back to you at {{ f.email }} soon.</p>
             <button type="button" onClick="{{ reset }}" style="margin-top: 18px; padding: 0 0 3px; background: none; border: 0; border-bottom: 1px solid rgba(246,241,232,0.5); color: #F6F1E8; font: inherit; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer">Send another</button>
           </div>
         </sc-if>
 
         <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
           <form onSubmit="{{ submit }}" noValidate="{{ true }}" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 22px 24px; margin-top: 26px">
+
+            <div aria-hidden="true" style="position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden">
+              <label>Leave this empty <input type="text" name="company_site" tabIndex="-1" autoComplete="off" value="{{ f.company_site }}" onChange="{{ onHoney }}"></label>
+            </div>
 
             <label style="display: flex; flex-direction: column; gap: 8px">
               <span style="font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(246,241,232,0.7)">Name *</span>
@@ -139,9 +143,13 @@
               <textarea name="message" rows="4" placeholder="Tell me a little about your project" value="{{ f.message }}" onChange="{{ onMessage }}" style="width: 100%; padding: 10px 0; background: transparent; border: 0; border-bottom: 1px solid rgba(246,241,232,0.3); color: #F6F1E8; font: inherit; font-size: 15px; font-weight: 300; line-height: 1.6; outline: none; resize: vertical" style-focus="border-bottom-color:#F6F1E8"></textarea>
             </label>
 
+            <sc-if value="{{ sendError }}" hint-placeholder-val="{{ false }}">
+              <div role="alert" style="grid-column: 1 / -1; font-size: 13px; line-height: 1.6; color: #E8A58F">{{ sendError }} <a href="mailto:cailinjustine@gmail.com" style="border-bottom: 1px solid currentColor">cailinjustine@gmail.com</a></div>
+            </sc-if>
+
             <div style="grid-column: 1 / -1; margin-top: 6px">
-              <button type="submit" style="display: inline-flex; align-items: center; gap: 14px; padding: 15px 26px; background: #F1EBE1; color: #1B1815; border: 1px solid #F1EBE1; font: inherit; font-size: clamp(10px, 1.1vw, 12px); letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: background 0.15s ease, color 0.15s ease" style-hover="background:transparent;color:#F8F4EC">
-                Send inquiry
+              <button type="submit" disabled="{{ sending }}" style="display: inline-flex; align-items: center; gap: 14px; padding: 15px 26px; background: #F1EBE1; color: #1B1815; border: 1px solid #F1EBE1; font: inherit; font-size: clamp(10px, 1.1vw, 12px); letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer; transition: background 0.15s ease, color 0.15s ease" style-hover="background:transparent;color:#F8F4EC">
+                {{ buttonLabel }}
                 <span style="font-size: 15px; line-height: 1">&#8594;</span>
               </button>
             </div>
@@ -164,11 +172,10 @@
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
-const EMPTY = { name: '', email: '', phone: '', business: '', service: '', budget: '', website: '', message: '' };
-const TO = 'cailinjustine@gmail.com';
+const EMPTY = { name: '', email: '', phone: '', business: '', service: '', budget: '', website: '', message: '', company_site: '' };
 
 class Component extends DCLogic {
-  state = { f: { ...EMPTY }, err: {}, sent: false };
+  state = { f: { ...EMPTY }, err: {}, sent: false, sending: false, sendError: '' };
 
   componentDidMount() {
     try {
@@ -184,8 +191,9 @@ class Component extends DCLogic {
     };
   }
 
-  submit = (e) => {
+  submit = async (e) => {
     e.preventDefault();
+    if (this.state.sending) return;
     const f = this.state.f;
     const err = {
       name: !f.name.trim(),
@@ -193,27 +201,34 @@ class Component extends DCLogic {
       service: !f.service
     };
     if (err.name || err.email || err.service) { this.setState({ err }); return; }
-    const lines = [
-      'Name: ' + f.name, 'Email: ' + f.email,
-      f.phone && 'Phone: ' + f.phone, f.business && 'Business: ' + f.business,
-      'Service: ' + f.service, f.budget && 'Budget: ' + f.budget,
-      f.website && 'Current website: ' + f.website, '', f.message
-    ].filter(l => l !== false && l !== '' || l === '');
-    const href = 'mailto:' + TO + '?subject=' + encodeURIComponent('Inquiry: ' + f.service + (f.business ? ' for ' + f.business : '')) + '&body=' + encodeURIComponent(lines.join('\n'));
-    try { window.open(href, '_self'); } catch (x) {}
-    this.setState({ sent: true });
+
+    this.setState({ sending: true, sendError: '' });
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify(f)
+      });
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || 'Your message could not be sent.');
+      this.setState({ sent: true, sending: false });
+    } catch (x) {
+      const why = x instanceof TypeError ? 'Connection problem, please try again.' : x.message;
+      this.setState({ sending: false, sendError: why + ' You can also email me at' });
+    }
   };
 
   renderVals() {
-    const { f, err, sent } = this.state;
+    const { f, err, sent, sending, sendError } = this.state;
     return {
-      f, err, sent, notSent: !sent,
+      f, err, sent, notSent: !sent, sending, sendError,
+      buttonLabel: sending ? 'Sending…' : 'Send inquiry',
       firstName: (f.name.trim().split(' ')[0]) || 'there',
       onName: this.field('name'), onEmail: this.field('email'), onPhone: this.field('phone'),
       onBusiness: this.field('business'), onService: this.field('service'), onBudget: this.field('budget'),
-      onWebsite: this.field('website'), onMessage: this.field('message'),
+      onWebsite: this.field('website'), onMessage: this.field('message'), onHoney: this.field('company_site'),
       submit: this.submit,
-      reset: () => this.setState({ f: { ...EMPTY }, err: {}, sent: false })
+      reset: () => this.setState({ f: { ...EMPTY }, err: {}, sent: false, sendError: '' })
     };
   }
 }

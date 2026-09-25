@@ -1,1 +1,15 @@
-{"name":"portfolio","compatibility_date":"2026-09-01","assets":{"directory":"./public"}}
+{
+  "name": "portfolio",
+  "compatibility_date": "2026-09-01",
+  "main": "worker.js",
+  // Files in public/ are served first; requests that match no file (like /api/contact) reach worker.js.
+  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "send_email": [
+    // Email Routing only delivers to verified destination addresses, so this can't be abused to spam others.
+    { "name": "CONTACT_EMAIL", "destination_address": "cailin.justineschirm@gmail.com" }
+  ],
+  "vars": {
+    "CONTACT_TO": "cailin.justineschirm@gmail.com",
+    "CONTACT_FROM": "contact@cailinjustine.dev"
+  }
+}
