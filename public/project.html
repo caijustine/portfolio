@@ -27,7 +27,7 @@
 
   <header class="site-header" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #F1EBE1; color: #211E1A; padding: 10px clamp(18px, 4vw, 44px); border-bottom: 1px solid rgba(33,30,26,0.12)">
     <a href="index.html" style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; white-space: nowrap">Cailin Justine</a>
-    <nav class="site-nav" style="display: flex; align-items: center; gap: clamp(14px, 3.4vw, 48px); font-size: clamp(10px, 1.1vw, 12px); letter-spacing: 0.22em; text-transform: uppercase">
+    <nav class="site-nav" style="display: flex; align-items: center; gap: clamp(14px, 3.4vw, 48px); font-size: clamp(12.5px, 1.33vw, 14.5px); letter-spacing: 0.22em; text-transform: uppercase">
       <a href="work.html" style="padding: 6px 0; border-bottom: 1px solid #211E1A">Work</a>
       <a href="about.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">About</a>
       <a href="services.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Services</a>
@@ -38,19 +38,19 @@
   <section data-screen-label="Project" style="padding: clamp(32px, 6vh, 64px) clamp(20px, 4.5vw, 56px) clamp(48px, 9vh, 96px)">
     <div style="max-width: 1100px; margin: 0 auto">
 
-      <a href="work.html" style="display: inline-flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5F51">&#8592; All work</a>
+      <a href="work.html" style="display: inline-flex; align-items: center; gap: 10px; font-size: 12.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5F51">&#8592; All work</a>
 
       <div style="display: flex; align-items: baseline; gap: 16px; margin-top: clamp(22px, 4vh, 36px)">
-        <span style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">{{ p.kind }}</span>
+        <span style="font-size: 13.5px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">{{ p.kind }}</span>
       </div>
       <h1 style="margin: 12px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(34px, 5.6vw, 66px); line-height: 1.02; text-transform: uppercase; text-wrap: balance">{{ p.title }}</h1>
-      <p style="margin: 20px 0 0; max-width: 60ch; font-size: clamp(14px, 1.4vw, 17px); font-weight: 300; line-height: 1.7; color: #4A413A; text-wrap: pretty">{{ p.summary }}</p>
+      <p style="margin: 20px 0 0; max-width: 60ch; font-size: clamp(15.5px, 1.52vw, 18.5px); font-weight: 300; line-height: 1.7; color: #4A413A; text-wrap: pretty">{{ p.summary }}</p>
 
       <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(22px, 4vh, 32px)">
         <sc-if value="{{ p.live }}" hint-placeholder-val="{{ false }}">
-          <a href="{{ p.live }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 14px; padding: 13px 24px; background: #1B1815; border: 1px solid #1B1815; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #F8F4EC; transition: background 0.15s ease, color 0.15s ease" style-hover="background:transparent;color:#1B1815">Visit live site <span style="font-size: 14px; line-height: 1">&#8599;</span></a>
+          <a href="{{ p.live }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 14px; padding: 13px 24px; background: #1B1815; border: 1px solid #1B1815; font-size: 13.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #F8F4EC; transition: background 0.15s ease, color 0.15s ease" style-hover="background:transparent;color:#1B1815">Visit live site <span style="font-size: 15.5px; line-height: 1">&#8599;</span></a>
         </sc-if>
-        <a href="{{ p.code }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 14px; padding: 13px 24px; border: 1px solid rgba(33,30,26,0.5); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #211E1A; transition: background 0.15s ease, color 0.15s ease" style-hover="background:#1B1815;color:#F8F4EC">View code <span style="font-size: 14px; line-height: 1">&#8599;</span></a>
+        <a href="{{ p.code }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 14px; padding: 13px 24px; border: 1px solid rgba(33,30,26,0.5); font-size: 13.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #211E1A; transition: background 0.15s ease, color 0.15s ease" style-hover="background:#1B1815;color:#F8F4EC">View code <span style="font-size: 15.5px; line-height: 1">&#8599;</span></a>
       </div>
 
       <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; margin-top: clamp(32px, 6vh, 56px); background: #1B1815; overflow: hidden; border: 1px solid rgba(33,30,26,0.14)">
@@ -63,21 +63,21 @@
 
         <aside style="display: flex; flex-direction: column; gap: 28px">
           <div>
-            <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">Role</div>
-            <div style="margin-top: 10px; font-size: 15px; font-weight: 300; line-height: 1.6">{{ p.role }}</div>
+            <div style="font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">Role</div>
+            <div style="margin-top: 10px; font-size: 16.5px; font-weight: 300; line-height: 1.6">{{ p.role }}</div>
           </div>
           <div>
-            <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">Built with</div>
+            <div style="font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">Built with</div>
             <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px">
               <sc-for list="{{ p.tech }}" as="t" hint-placeholder-count="5">
-                <span style="padding: 5px 11px; border: 1px solid rgba(33,30,26,0.25); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E">{{ t }}</span>
+                <span style="padding: 5px 11px; border: 1px solid rgba(33,30,26,0.25); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E">{{ t }}</span>
               </sc-for>
             </div>
           </div>
           <sc-if value="{{ p.hosting }}" hint-placeholder-val="{{ false }}">
             <div>
-              <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">Hosting</div>
-              <div style="margin-top: 10px; font-size: 15px; font-weight: 300; line-height: 1.6">{{ p.hosting }}</div>
+              <div style="font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">Hosting</div>
+              <div style="margin-top: 10px; font-size: 16.5px; font-weight: 300; line-height: 1.6">{{ p.hosting }}</div>
             </div>
           </sc-if>
         </aside>
@@ -87,12 +87,12 @@
             <div style="padding-top: 22px; border-top: 1px solid rgba(33,30,26,0.16)">
               <h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-style: italic; font-size: clamp(22px, 2.4vw, 28px); line-height: 1.2">{{ s.h }}</h2>
               <sc-if value="{{ s.p }}" hint-placeholder-val="{{ true }}">
-                <p style="margin: 14px 0 0; max-width: 62ch; font-size: clamp(14px, 1.3vw, 16px); font-weight: 300; line-height: 1.75; color: #4A413A; text-wrap: pretty">{{ s.p }}</p>
+                <p style="margin: 14px 0 0; max-width: 62ch; font-size: clamp(15.5px, 1.42vw, 17.5px); font-weight: 300; line-height: 1.75; color: #4A413A; text-wrap: pretty">{{ s.p }}</p>
               </sc-if>
               <sc-if value="{{ s.items }}" hint-placeholder-val="{{ false }}">
                 <div style="display: flex; flex-direction: column; margin-top: 14px">
                   <sc-for list="{{ s.items }}" as="it" hint-placeholder-count="4">
-                    <div style="display: flex; gap: 14px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid rgba(33,30,26,0.1); font-size: clamp(14px, 1.3vw, 15.5px); font-weight: 300; line-height: 1.6; color: #3A342E">
+                    <div style="display: flex; gap: 14px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid rgba(33,30,26,0.1); font-size: clamp(15.5px, 1.43vw, 17px); font-weight: 300; line-height: 1.6; color: #3A342E">
                       <span style="flex: 0 0 auto; width: 12px; height: 1px; background: #6B5F51; transform: translateY(-4px)"></span>
                       <span>{{ it }}</span>
                     </div>
@@ -106,9 +106,9 @@
       </div>
 
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-top: clamp(48px, 9vh, 88px); padding-top: 24px; border-top: 1px solid rgba(33,30,26,0.16)">
-        <a href="work.html" style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5F51">&#8592; All work</a>
+        <a href="work.html" style="font-size: 12.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5F51">&#8592; All work</a>
         <a href="{{ nextHref }}" style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px; text-align: right">
-          <span style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5F51">Next project</span>
+          <span style="font-size: 12.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5F51">Next project</span>
           <span style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(20px, 2.4vw, 28px)">{{ nextTitle }} &#8594;</span>
         </a>
       </div>
@@ -118,7 +118,7 @@
 
   <footer class="site-footer" style="background: #14120F; color: #F6F1E8; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 20px; padding: clamp(14px, 3vh, 26px) clamp(20px, 4vw, 56px)">
     <a href="index.html" style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(28px, 4vw, 44px); line-height: 1.1">Cailin Justine</a>
-    <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.26em; text-transform: uppercase; color: rgba(246,241,232,0.78); text-align: center">Let's build something great.</div>
+    <div style="font-size: clamp(11.5px, 1.22vw, 14px); letter-spacing: 0.26em; text-transform: uppercase; color: rgba(246,241,232,0.78); text-align: center">Let's build something great.</div>
     <div style="display: flex; justify-content: flex-end; align-items: center; gap: clamp(14px, 2.2vw, 26px)">
       <a href="https://github.com/caijustine" target="_blank" rel="noopener" aria-label="GitHub" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
         <img src="https://cdn.simpleicons.org/github/F6F1E8" alt="GitHub" style="width: 20px; height: 20px">
