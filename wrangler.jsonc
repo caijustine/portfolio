@@ -3,7 +3,7 @@
   "compatibility_date": "2026-09-01",
   "main": "worker.js",
   // Files in public/ are served first; requests that match no file (like /api/contact) reach worker.js.
-  "assets": { "directory": "./public", "binding": "ASSETS" },
+  "assets": { "directory": "./public", "binding": "ASSETS", "not_found_handling": "404-page" },
   "send_email": [
     // Email Routing only delivers to verified destination addresses, so this can't be abused to spam others.
     { "name": "CONTACT_EMAIL", "destination_address": "cailin.justineschirm@gmail.com" }
