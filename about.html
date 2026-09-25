@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Cailin Justine</title>
+<meta name="description" content="Portfolio of Cailin Justine, a full stack software developer. Web apps, websites, and services.">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Mrs+Saint+Delafield&family=Jost:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  html { scroll-behavior: smooth; }
+  html, body { margin: 0; padding: 0; background: #14120F; }
+  * { box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #C9BCA6; }
+  img { display: block; }
+</style>
+</helmet>
+
+<div style="font-family: 'Jost', system-ui, sans-serif; background: #14120F; color: #F6F1E8; min-height: 100vh; overflow-x: hidden">
+
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #F1EBE1; color: #211E1A; padding: 10px clamp(18px, 4vw, 44px)">
+    <a href="index.html" style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; white-space: nowrap">Cailin Justine</a>
+    <nav style="display: flex; align-items: center; gap: clamp(14px, 3.4vw, 48px); font-size: clamp(10px, 1.1vw, 12px); letter-spacing: 0.22em; text-transform: uppercase">
+      <a href="work.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Work</a>
+      <a href="about.html" style="padding: 6px 0; border-bottom: 1px solid #211E1A">About</a>
+      <a href="services.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Services</a>
+      <a href="contact.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Contact</a>
+    </nav>
+  </header>
+
+
+
+  <section data-screen-label="About" style="padding: clamp(24px, 4.5vh, 56px) clamp(20px, 4.5vw, 56px) clamp(32px, 6vh, 64px)">
+    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); align-items: center; gap: clamp(28px, 6vw, 80px)">
+      <div style="position: relative; width: min(100%, 440px, calc((100vh - 150px) * 0.8)); aspect-ratio: 4 / 5; background: #1B1815">
+        <img src="assets/about-portrait.webp" alt="Cailin Justine" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+      </div>
+      <div>
+        <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.3em; text-transform: uppercase; color: rgba(246,241,232,0.65)">About me</div>
+        <h1 style="margin: 14px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(34px, 5.2vw, 66px); line-height: 1.02; text-transform: uppercase; color: #F8F4EC">Hello, I'm Cailin</h1>
+        <p style="margin: clamp(12px, 2.2vh, 20px) 0 0; max-width: 46ch; font-size: clamp(14.5px, 1.5vw, 18px); font-weight: 300; line-height: 1.7; color: rgba(246,241,232,0.92); text-wrap: pretty">I’m a software developer, which basically means I spend half my time fighting with code and the other half wondering why it works. I’m also fueled by an unhealthy amount of coffee and confidently pretending I knew the answer before I Googled it.</p>
+        <nav aria-label="On this page" style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: clamp(16px, 2.8vh, 24px); font-size: clamp(9.5px, 1vw, 11px); letter-spacing: 0.22em; text-transform: uppercase">
+          <span style="width: 100%; color: rgba(246,241,232,0.6)">Jump to</span>
+          <a href="#looking-for" style="padding: 9px 14px; border: 1px solid rgba(246,241,232,0.45); color: #F6F1E8; white-space: nowrap; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815;border-color:#F1EBE1">What I’m looking for</a>
+          <a href="#story" style="padding: 9px 14px; border: 1px solid rgba(246,241,232,0.45); color: #F6F1E8; white-space: nowrap; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815;border-color:#F1EBE1">My story</a>
+          <a href="#ai" style="padding: 9px 14px; border: 1px solid rgba(246,241,232,0.45); color: #F6F1E8; white-space: nowrap; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815;border-color:#F1EBE1">My thoughts on AI</a>
+          <a href="#free-time" style="padding: 9px 14px; border: 1px solid rgba(246,241,232,0.45); color: #F6F1E8; white-space: nowrap; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815;border-color:#F1EBE1">In my free time</a>
+        </nav>
+        <div style="width: clamp(90px, 14vw, 150px); height: 1px; background: rgba(248,244,236,0.45); margin: clamp(16px, 2.8vh, 26px) 0"></div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px 24px">
+          <div>
+            <div style="font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(246,241,232,0.55)">Studying</div>
+            <div style="margin-top: 8px; font-size: clamp(12.5px, 1.2vw, 15px); font-weight: 300">Software Development, Dixie Technical College</div>
+          </div>
+          <div>
+            <div style="font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(246,241,232,0.55)">Focus</div>
+            <div style="margin-top: 8px; font-size: clamp(12.5px, 1.2vw, 15px); font-weight: 300">Full stack &amp; infrastructure</div>
+          </div>
+          <div>
+            <div style="font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(246,241,232,0.55)">Available</div>
+            <div style="margin-top: 8px; font-size: clamp(12.5px, 1.2vw, 15px); font-weight: 300">January or Summer 2027 internships</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(18px, 3.2vh, 30px)">
+          <a href="work.html" style="display: inline-flex; align-items: center; gap: 14px; padding: 15px 26px; border: 1px solid rgba(248,244,236,0.7); font-size: clamp(10px, 1.1vw, 12px); letter-spacing: 0.2em; text-transform: uppercase; color: #F8F4EC; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815;border-color:#F1EBE1">
+            See my work
+            <span style="font-size: 15px; line-height: 1">&#8594;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="looking-for" data-screen-label="What I'm looking for" style="padding: 0 clamp(20px, 4.5vw, 56px) clamp(48px, 9vh, 104px)">
+    <div style="max-width: 1100px; margin: 0 auto; background: #F1EBE1; color: #211E1A; padding: clamp(32px, 6vw, 72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: clamp(24px, 5vw, 64px); align-items: start">
+      <div>
+        <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.3em; text-transform: uppercase; color: #6B5F51">Internships</div>
+        <h2 style="margin: 16px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.1">What I’m looking for</h2>
+        <div style="margin-top: 22px; font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase; color: #6B5F51">Available</div>
+        <div style="margin-top: 8px; font-size: clamp(13px, 1.25vw, 15.5px); font-weight: 400">January or Summer 2027 internships</div>
+        <div style="margin-top: 6px; font-size: clamp(12px, 1.15vw, 14px); font-weight: 300; color: #4A413A">Have a different time in mind? <a href="contact.html" style="color: #211E1A; border-bottom: 1px solid rgba(33,30,26,0.45)" style-hover="color:#6B5F51;border-bottom-color:#6B5F51">Contact me</a></div>
+      </div>
+      <div>
+        <p style="margin: 0; font-size: clamp(14px, 1.4vw, 17px); font-weight: 300; line-height: 1.85; color: #3A342E; text-wrap: pretty">I’m looking for a full-stack development internship where I can learn as much as possible, build real-world experience, and seriously grow my skill set. I want to work alongside developers who are more experienced than me, challenge me, teach me things I don’t know, and push me to get better.</p>
+        <p style="margin: 16px 0 0; font-size: clamp(14px, 1.4vw, 17px); font-weight: 300; line-height: 1.85; color: #3A342E; text-wrap: pretty">I’m not expecting to walk in knowing everything. Honestly, I want the opposite—I want to be somewhere I can ask questions, try things, make mistakes, figure out why they broke, and keep learning. My goal is to take what I’ve learned in school and actually apply it to real projects while continuing to learn as many new tools, technologies, and skills as I can. I’m looking for a team where I can contribute, learn from the people around me, and leave the internship as a significantly stronger developer than when I started.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" data-screen-label="My story" style="border-top: 1px solid rgba(246,241,232,0.12); padding: clamp(48px, 9vh, 104px) clamp(20px, 4.5vw, 56px)">
+    <div style="max-width: 1100px; margin: 0 auto">
+      <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.3em; text-transform: uppercase; color: rgba(246,241,232,0.65)">My story</div>
+      <h2 style="margin: 16px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(28px, 3.6vw, 44px); line-height: 1.1; color: #F8F4EC">A little about me</h2>
+      <div style="position: relative; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr)); gap: clamp(36px, 6vh, 48px) 0; margin-top: clamp(36px, 6vh, 56px)">
+        <div style="position: relative; padding: 34px clamp(16px, 2.6vw, 34px) 0 0; border-top: 2px solid rgba(241,235,225,0.4)">
+          <span style="position: absolute; top: -9px; left: 0; width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; border: 2px solid #F1EBE1; background: #14120F; box-shadow: 0 0 0 5px #14120F"></span>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.02em">
+            <span style="color: rgba(246,241,232,0.55)">a41c9e0</span>
+            <span style="padding: 2px 7px; border: 1px solid rgba(246,241,232,0.35); color: rgba(246,241,232,0.75); border-radius: 999px; white-space: nowrap">init</span>
+          </div>
+          <div style="font-size: 9.5px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(246,241,232,0.55)">High School</div>
+          <h3 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(20px, 2vw, 25px); line-height: 1.2; color: #F8F4EC">The Group Home</h3>
+          <p style="margin: 12px 0 0; font-size: clamp(13.5px, 1.3vw, 15.5px); font-weight: 300; line-height: 1.8; color: rgba(246,241,232,0.88); text-wrap: pretty">My journey into tech was definitely not the traditional one. In high school, I lived in a group home where there was essentially zero technology. Not “we had old computers” zero. I mean technology was not really part of the equation.</p>
+        </div>
+        <div style="position: relative; padding: 34px clamp(16px, 2.6vw, 34px) 0 0; border-top: 2px solid rgba(241,235,225,0.4)">
+          <span style="position: absolute; top: -9px; left: 0; width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; border: 2px solid #F1EBE1; background: #14120F; box-shadow: 0 0 0 5px #14120F"></span>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.02em">
+            <span style="color: rgba(246,241,232,0.55)">7b2f1d3</span>
+            <span style="padding: 2px 7px; border: 1px solid rgba(246,241,232,0.35); color: rgba(246,241,232,0.75); border-radius: 999px; white-space: nowrap">tech-program (deleted)</span>
+          </div>
+          <div style="font-size: 9.5px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(246,241,232,0.55)">First Tech Class</div>
+          <h3 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(20px, 2vw, 25px); line-height: 1.2; color: #F8F4EC">Confused, but apparently promising</h3>
+          <p style="margin: 12px 0 0; font-size: clamp(13.5px, 1.3vw, 15.5px); font-weight: 300; line-height: 1.8; color: rgba(246,241,232,0.88); text-wrap: pretty">One year, they attempted to introduce a technology program. It lasted about as long as my understanding of what was happening.</p>
+          <p style="margin: 12px 0 0; font-size: clamp(13.5px, 1.3vw, 15.5px); font-weight: 300; line-height: 1.8; color: rgba(246,241,232,0.88); text-wrap: pretty">The program ended up getting cut that same year, but my teacher still taught us some of the basics. I was completely confused. I understood approximately 4% of what he was saying, yet somehow he told me he saw a lot of potential in me.</p>
+          <p style="margin: 12px 0 0; font-size: clamp(13.5px, 1.3vw, 15.5px); font-weight: 300; line-height: 1.8; color: rgba(246,241,232,0.88); text-wrap: pretty">I wasn’t entirely sure what he was seeing, but I decided to trust him.</p>
+        </div>
+        <div style="position: relative; padding: 34px clamp(16px, 2.6vw, 34px) 0 0; border-top: 2px solid rgba(241,235,225,0.4)">
+          <span style="position: absolute; top: -9px; left: 0; width: 16px; height: 16px; box-sizing: border-box; border-radius: 50%; border: 2px solid #F1EBE1; background: #14120F; box-shadow: 0 0 0 5px #14120F"></span>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.02em">
+            <span style="color: rgba(246,241,232,0.55)">c9e04a8</span>
+            <span style="padding: 2px 7px; border: 1px solid rgba(246,241,232,0.35); color: rgba(246,241,232,0.75); border-radius: 999px; white-space: nowrap">dixie-tech</span>
+          </div>
+          <div style="font-size: 9.5px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(246,241,232,0.55)">Dixie Tech</div>
+          <h3 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(20px, 2vw, 25px); line-height: 1.2; color: #F8F4EC">A Slight (aka Rather Steep) Learning Curve</h3>
+          <p style="margin: 12px 0 0; font-size: clamp(13.5px, 1.3vw, 15.5px); font-weight: 300; line-height: 1.8; color: rgba(246,241,232,0.88); text-wrap: pretty">When I started at Dixie Tech, I quickly realized that having potential and knowing what you’re doing are apparently two very different things.</p>
+          <p style="margin: 12px 0 0; font-size: clamp(13.5px, 1.3vw, 15.5px); font-weight: 300; line-height: 1.8; color: rgba(246,241,232,0.88); text-wrap: pretty">I came in with basically no background in technology and felt completely overwhelmed. Everyone else seemed to know what they were doing, and I was just trying to figure out what all the words meant.</p>
+          <p style="margin: 12px 0 0; font-size: clamp(13.5px, 1.3vw, 15.5px); font-weight: 300; line-height: 1.8; color: rgba(246,241,232,0.88); text-wrap: pretty">But I liked it. And I was stubborn enough to keep going.</p>
+        </div>
+        <div style="position: relative; padding: 34px clamp(16px, 2.6vw, 34px) 0 0; border-top: 2px solid rgba(241,235,225,0.4)">
+          <span style="position: absolute; top: -9px; left: 0; width: 16px; height: 16px; border-radius: 50%; background: #F1EBE1; box-shadow: 0 0 0 5px #14120F, 0 0 0 6px rgba(241,235,225,0.4)"></span>
+          <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 12px; font-family: 'DM Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.02em">
+            <span style="color: rgba(246,241,232,0.55)">f3d8b21</span>
+            <span style="padding: 3px 8px; background: #F1EBE1; color: #1B1815; border-radius: 999px; white-space: nowrap">HEAD → main</span>
+          </div>
+          <div style="font-size: 9.5px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(246,241,232,0.55)">Now</div>
+          <h3 style="margin: 10px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(20px, 2vw, 25px); line-height: 1.2; color: #F8F4EC">Still learning. Just considerably less confused.</h3>
+          <div style="display: flex; align-items: baseline; gap: 12px; margin-top: 14px; font-family: 'Playfair Display', Georgia, serif; color: #F8F4EC; line-height: 1">
+            <span style="font-size: clamp(34px, 4vw, 52px); color: rgba(246,241,232,0.45)">13</span>
+            <span style="font-size: clamp(20px, 2vw, 26px); color: rgba(246,241,232,0.6)">&#8594;</span>
+            <span style="font-size: clamp(52px, 6.4vw, 84px)">56</span>
+            <span style="font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.24em; color: rgba(246,241,232,0.65)">WPM</span>
+          </div>
+          <p style="margin: 12px 0 0; font-size: clamp(13.5px, 1.3vw, 15.5px); font-weight: 300; line-height: 1.8; color: rgba(246,241,232,0.88); text-wrap: pretty">I started the year typing at 13 WPM and worked my way up to 56 WPM.</p>
+          <p style="margin: 12px 0 0; font-size: clamp(13.5px, 1.3vw, 15.5px); font-weight: 300; line-height: 1.8; color: rgba(246,241,232,0.88); text-wrap: pretty">Which honestly sums up my whole experience with tech pretty well: I usually have no idea what I’m doing at first. Eventually, I do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai" data-screen-label="What about AI" style="border-top: 1px solid rgba(246,241,232,0.12); padding: clamp(48px, 9vh, 104px) clamp(20px, 4.5vw, 56px)">
+    <div style="max-width: 1100px; margin: 0 auto">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(32px, 6vw, 80px); align-items: center">
+      <div>
+        <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.3em; text-transform: uppercase; color: rgba(246,241,232,0.65)">The elephant in the room</div>
+        <h2 style="margin: 18px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(38px, 6vw, 74px); line-height: 1; text-transform: uppercase; color: #F8F4EC">What about AI?</h2>
+        <div style="margin-top: 18px; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(20px, 2.4vw, 30px); line-height: 1; color: #F8F4EC">easy:</div>
+        <img src="assets/im-a-fan.png" alt="I’m a fan." style="margin-top: -4px; width: clamp(180px, 24vw, 300px); height: auto">
+      </div>
+      <div>
+        <p style="margin: 0; max-width: 50ch; font-size: clamp(14px, 1.4vw, 17px); font-weight: 300; line-height: 1.75; color: rgba(246,241,232,0.9); text-wrap: pretty">Everybody either hates AI or loves it. There is no in-between, and Thanksgiving dinner has proven that. So I’ll just say it: I love it. I walked into this field right as AI did, so no, I don’t have ten years of hard coding under my belt (shocking, I know). I love hard coding, I’m still learning it, and part of me wishes I’d shown up back when that was the only option. But the industry has changed, and AI now writes about 42% of all committed code. Time is everything… but so is quality.</p>
+        <p style="margin: 16px 0 0; max-width: 50ch; font-size: clamp(14px, 1.4vw, 17px); font-weight: 300; line-height: 1.75; color: rgba(246,241,232,0.9); text-wrap: pretty">So the real challenge is building the best, cleanest version of something in the smartest way possible, without spending years hard coding it first. Fast is great. Fast and broken is just a faster way to cry. Getting it right is where I take pride in my work, and it’s what I’m always working to get better at.</p>
+        <p style="margin: 16px 0 0; max-width: 50ch; font-size: clamp(14px, 1.4vw, 17px); font-weight: 300; line-height: 1.75; color: rgba(246,241,232,0.9); text-wrap: pretty">And let me just say, AI is straight-up magic. Whether that’s good magic or dark magic, lol, that’s your call. You tell it what you want and bam, you’ve created another dimension. But AI is only as good as the person using it… and some days I worry for mine. So I put the work into knowing exactly what to ask for and double-checking everything it hands back, because it will happily build the wrong thing beautifully.</p>
+        <p style="margin: 16px 0 0; max-width: 50ch; font-size: clamp(14px, 1.4vw, 17px); font-weight: 300; line-height: 1.75; color: rgba(246,241,232,0.9); text-wrap: pretty">I could talk about AI forever, but considering I’ve already crammed what should’ve been about five pages of text onto one, I think I’ve made my point. You’re welcome (I’m sorry lol).</p>
+      </div>
+      </div>
+      <div style="margin-top: clamp(48px, 8vh, 80px); text-align: center">
+        <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(246,241,232,0.55)">What I use</div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px; margin-top: 14px">
+          <span style="padding: 7px 14px; border: 1px solid rgba(246,241,232,0.35); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #F6F1E8">Claude</span>
+          <span style="padding: 7px 14px; border: 1px solid rgba(246,241,232,0.35); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #F6F1E8">Claude Code</span>
+          <span style="padding: 7px 14px; border: 1px solid rgba(246,241,232,0.35); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #F6F1E8">ChatGPT</span>
+          <span style="padding: 7px 14px; border: 1px solid rgba(246,241,232,0.35); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #F6F1E8">Codex</span>
+          <span style="padding: 7px 14px; border: 1px solid rgba(246,241,232,0.35); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #F6F1E8">Antigravity</span>
+          <span style="padding: 7px 4px; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246,241,232,0.6)">&amp; more</span>
+        </div>
+      </div>
+      <div onMouseEnter="{{ pause }}" onMouseLeave="{{ resume }}" style="max-width: 760px; margin: clamp(36px, 6vh, 56px) auto 0; padding-top: clamp(40px, 7vh, 64px); border-top: 1px solid rgba(246,241,232,0.16); text-align: center">
+        <div style="display: grid">
+          <div aria-hidden="{{ h0 }}" style="grid-area: 1 / 1; opacity: {{ o0 }}; visibility: {{ v0 }}; transition: opacity 0.45s ease, visibility 0.45s ease">
+            <h3 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(21px, 2.2vw, 27px); line-height: 1.25; color: #F8F4EC">How it helps me learn</h3>
+            <p style="margin: 22px auto 0; max-width: 44ch; font-size: clamp(14px, 1.45vw, 17px); font-weight: 300; line-height: 1.9; color: rgba(246,241,232,0.86); text-wrap: pretty">When I don’t understand something, I ask AI to explain it. Then I ask why. Then I ask again, like a toddler, until it finally clicks. It’s the most patient tutor I’ve ever had, it has never once sighed at me, and it’s a big reason I went from knowing absolutely nothing to shipping real projects in a year. (And to any of my teachers reading this: you helped a lot too. You just needed more sleep than AI does.)</p>
+          </div>
+          <div aria-hidden="{{ h1 }}" style="grid-area: 1 / 1; opacity: {{ o1 }}; visibility: {{ v1 }}; transition: opacity 0.45s ease, visibility 0.45s ease">
+            <h3 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(21px, 2.2vw, 27px); line-height: 1.25; color: #F8F4EC">How I check its work</h3>
+            <p style="margin: 22px auto 0; max-width: 44ch; font-size: clamp(14px, 1.45vw, 17px); font-weight: 300; line-height: 1.9; color: rgba(246,241,232,0.86); text-wrap: pretty">AI is fast. It’s also confidently wrong sometimes (which, yea okay same… and I wouldn’t believe you if you said you never have… I can feel it through the screen). So I read every change before I keep it, run it to make sure it actually works, and make it walk me through anything I couldn’t have written myself. I’m also learning more ways to double-check it, like writing unit tests and setting up AI skills that review my work before anything gets the go-ahead. If I can’t explain the code, it doesn’t ship. No vibes-only commits.</p>
+          </div>
+          <div aria-hidden="{{ h2 }}" style="grid-area: 1 / 1; opacity: {{ o2 }}; visibility: {{ v2 }}; transition: opacity 0.45s ease, visibility 0.45s ease">
+            <h3 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(21px, 2.2vw, 27px); line-height: 1.25; color: #F8F4EC">AI I’ve built into my projects</h3>
+            <p style="margin: 22px auto 0; max-width: 44ch; font-size: clamp(14px, 1.45vw, 17px); font-weight: 300; line-height: 1.9; color: rgba(246,241,232,0.86); text-wrap: pretty">I don’t just <em style="font-style: italic">use</em> AI… I <em style="font-style: italic">put it to work</em>. My <a href="project.html?p=ledger" style="color: #F8F4EC; border-bottom: 1px solid rgba(246,241,232,0.45)" style-hover="color:#C9BCA6;border-bottom-color:#C9BCA6">Daily Work Ledger</a> uses Claude to write daily and weekly reports from only what I logged, and it’s been told very firmly not to make anything up. <a href="project.html?p=nebula" style="color: #F8F4EC; border-bottom: 1px solid rgba(246,241,232,0.45)" style-hover="color:#C9BCA6;border-bottom-color:#C9BCA6">Nebula</a> has a chat assistant that answers questions about a class’s shared resources and streams its answers back live, so nobody has to dig through a pile of links to find one thing.</p>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 10px; margin-top: clamp(24px, 4.5vh, 36px)">
+            <button type="button" aria-label="Previous point" onClick="{{ prev }}" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(246,241,232,0.35); background: transparent; color: #F6F1E8; font-size: 15px; cursor: pointer; transition: background 0.15s ease, color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815">&#8592;</button>
+            <button type="button" aria-label="{{ playLabel }}" onClick="{{ togglePlay }}" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(246,241,232,0.35); background: transparent; color: #F6F1E8; cursor: pointer; transition: background 0.15s ease, color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815"><sc-if value="{{ stopped }}" hint-placeholder-val="{{ false }}"><svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><path d="M2.5 1.2v9.6L10.5 6z"></path></svg></sc-if><sc-if value="{{ playing }}" hint-placeholder-val="{{ true }}"><svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor"><rect x="2" y="1.5" width="2.6" height="9"></rect><rect x="7.4" y="1.5" width="2.6" height="9"></rect></svg></sc-if></button>
+            <button type="button" aria-label="Next point" onClick="{{ next }}" style="width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(246,241,232,0.35); background: transparent; color: #F6F1E8; font-size: 15px; cursor: pointer; transition: background 0.15s ease, color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815">&#8594;</button>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 4px; margin-top: 14px">
+          <button type="button" aria-label="Show point 1" onClick="{{ go0 }}" style="width: 22px; height: 22px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span style="width: 8px; height: 8px; border-radius: 50%; background: {{ d0 }}; transition: background 0.3s ease"></span></button>
+          <button type="button" aria-label="Show point 2" onClick="{{ go1 }}" style="width: 22px; height: 22px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span style="width: 8px; height: 8px; border-radius: 50%; background: {{ d1 }}; transition: background 0.3s ease"></span></button>
+          <button type="button" aria-label="Show point 3" onClick="{{ go2 }}" style="width: 22px; height: 22px; padding: 0; border: 0; background: transparent; cursor: pointer; display: flex; align-items: center; justify-content: center"><span style="width: 8px; height: 8px; border-radius: 50%; background: {{ d2 }}; transition: background 0.3s ease"></span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="free-time" data-screen-label="In my free time" style="border-top: 1px solid rgba(246,241,232,0.12); padding: clamp(48px, 9vh, 104px) clamp(20px, 4.5vw, 56px)">
+    <div style="max-width: 1100px; margin: 0 auto">
+      <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.3em; text-transform: uppercase; color: rgba(246,241,232,0.65)">In my free time</div>
+      <p style="margin: 16px 0 0; max-width: 34ch; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(22px, 2.8vw, 34px); line-height: 1.3; color: #F8F4EC; text-wrap: pretty">Outside of tech, I’m usually spending time with friends and family, drinking coffee, or finding an excuse to get to the beach. Ideally all three, but I’m not picky.</p>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 140px), 1fr)); gap: clamp(10px, 1.4vw, 16px); margin-top: clamp(28px, 5vh, 44px)">
+        <div style="position: relative; aspect-ratio: 3 / 4; background: #1B1815; border: 1px solid rgba(246,241,232,0.12)"><span style="position: absolute; inset: 0; overflow: hidden; display: block"><img src="assets/about-photo-1.webp" alt="Free time photo" style="position: absolute; left: 41.663%; top: 21.321%; width: 131.056%; height: 162.222%; max-width: none; transform: translate(-50%, -50%); display: block"></span></div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: #1B1815; border: 1px solid rgba(246,241,232,0.12)"><img src="assets/about-photo-2.webp" alt="Free time photo" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: #1B1815; border: 1px solid rgba(246,241,232,0.12)"><img src="assets/about-photo-3.webp" alt="Free time photo" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: #1B1815; border: 1px solid rgba(246,241,232,0.12)"><img src="assets/about-photo-4.webp" alt="Free time photo" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></div>
+        <div style="position: relative; aspect-ratio: 3 / 4; background: #1B1815; border: 1px solid rgba(246,241,232,0.12)"><img src="assets/about-photo-5.webp" alt="Free time photo" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #F1EBE1; color: #211E1A; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 20px; padding: clamp(14px, 3vh, 26px) clamp(20px, 4vw, 56px)">
+    <a href="index.html" style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(28px, 4vw, 44px); line-height: 1.1">Cailin Justine</a>
+    <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.26em; text-transform: uppercase; color: #3A342E; text-align: center">Let's build something great.</div>
+    <div style="display: flex; justify-content: flex-end; align-items: center; gap: clamp(14px, 2.2vw, 26px)">
+      <a href="https://github.com/caijustine" target="_blank" rel="noopener" aria-label="GitHub" style="display: flex; opacity: 0.8; transition: opacity 0.15s ease" style-hover="opacity:1">
+        <img src="https://cdn.simpleicons.org/github/211E1A" alt="GitHub" style="width: 20px; height: 20px">
+      </a>
+      <a href="contact.html" aria-label="Email" style="display: flex; opacity: 0.8; transition: opacity 0.15s ease" style-hover="opacity:1">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#211E1A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect><path d="m3 6 9 6.5L21 6"></path></svg>
+      </a>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { i: 0, stopped: false };
+  componentDidMount() {
+    this.start();
+    const id = decodeURIComponent((location.hash || '').slice(1));
+    if (!id) return;
+    let tries = 0;
+    const go = () => {
+      const el = document.getElementById(id);
+      if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY });
+      if (++tries < 6) setTimeout(go, 150);
+    };
+    setTimeout(go, 50);
+  }
+  componentWillUnmount() { clearInterval(this.timer); }
+  start() { clearInterval(this.timer); if (this.state && this.state.stopped) return; this.timer = setInterval(() => this.setState(s => ({ i: (s.i + 1) % 3 })), 7000); }
+  go(n) { this.setState({ i: (n + 3) % 3 }); if (!this.paused) this.start(); }
+  renderVals() {
+    const i = this.state.i, v = {};
+    [0, 1, 2].forEach(k => {
+      v['o' + k] = k === i ? 1 : 0;
+      v['v' + k] = k === i ? 'visible' : 'hidden';
+      v['h' + k] = k === i ? 'false' : 'true';
+      v['b' + k] = k === i ? '#F6F1E8' : 'rgba(246,241,232,0.22)';
+      v['d' + k] = k === i ? '#F6F1E8' : 'rgba(246,241,232,0.28)';
+      v['go' + k] = () => this.go(k);
+    });
+    return { ...v,
+      stopped: this.state.stopped, playing: !this.state.stopped,
+      playLabel: this.state.stopped ? 'Play' : 'Pause',
+      togglePlay: () => this.setState(s => ({ stopped: !s.stopped }), () => { if (this.state.stopped) clearInterval(this.timer); else if (!this.paused) this.start(); }),
+      counter: '0' + (i + 1) + ' / 03',
+      prev: () => this.go(i - 1), next: () => this.go(i + 1),
+      pause: () => { this.paused = true; clearInterval(this.timer); },
+      resume: () => { this.paused = false; this.start(); } };
+  }
+}
+</script>
+</body>
+</html>

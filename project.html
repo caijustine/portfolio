@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project | Cailin Justine</title>
+<meta name="description" content="Portfolio of Cailin Justine, a full stack software developer. Web apps, websites, and services.">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Mrs+Saint+Delafield&family=Jost:wght@300;400;500&display=swap">
+<style>
+  html, body { margin: 0; padding: 0; background: #F1EBE1; }
+  * { box-sizing: border-box; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: #6B5F51; }
+  img { display: block; }
+</style>
+</helmet>
+
+<div style="font-family: 'Jost', system-ui, sans-serif; background: #F1EBE1; color: #211E1A; min-height: 100vh; overflow-x: hidden">
+
+  <header style="display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #F1EBE1; color: #211E1A; padding: 10px clamp(18px, 4vw, 44px); border-bottom: 1px solid rgba(33,30,26,0.12)">
+    <a href="index.html" style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; white-space: nowrap">Cailin Justine</a>
+    <nav style="display: flex; align-items: center; gap: clamp(14px, 3.4vw, 48px); font-size: clamp(10px, 1.1vw, 12px); letter-spacing: 0.22em; text-transform: uppercase">
+      <a href="work.html" style="padding: 6px 0; border-bottom: 1px solid #211E1A">Work</a>
+      <a href="about.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">About</a>
+      <a href="services.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Services</a>
+      <a href="contact.html" style="padding: 6px 0; border-bottom: 1px solid transparent" style-hover="border-bottom-color:#211E1A;color:#211E1A">Contact</a>
+    </nav>
+  </header>
+
+  <section data-screen-label="Project" style="padding: clamp(32px, 6vh, 64px) clamp(20px, 4.5vw, 56px) clamp(48px, 9vh, 96px)">
+    <div style="max-width: 1100px; margin: 0 auto">
+
+      <a href="work.html" style="display: inline-flex; align-items: center; gap: 10px; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5F51">&#8592; All work</a>
+
+      <div style="display: flex; align-items: baseline; gap: 16px; margin-top: clamp(22px, 4vh, 36px)">
+        <span style="font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">{{ p.kind }}</span>
+      </div>
+      <h1 style="margin: 12px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(34px, 5.6vw, 66px); line-height: 1.02; text-transform: uppercase; text-wrap: balance">{{ p.title }}</h1>
+      <p style="margin: 20px 0 0; max-width: 60ch; font-size: clamp(14px, 1.4vw, 17px); font-weight: 300; line-height: 1.7; color: #4A413A; text-wrap: pretty">{{ p.summary }}</p>
+
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: clamp(22px, 4vh, 32px)">
+        <sc-if value="{{ p.live }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ p.live }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 14px; padding: 13px 24px; background: #1B1815; border: 1px solid #1B1815; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #F8F4EC; transition: background 0.15s ease, color 0.15s ease" style-hover="background:transparent;color:#1B1815">Visit live site <span style="font-size: 14px; line-height: 1">&#8599;</span></a>
+        </sc-if>
+        <a href="{{ p.code }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 14px; padding: 13px 24px; border: 1px solid rgba(33,30,26,0.5); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #211E1A; transition: background 0.15s ease, color 0.15s ease" style-hover="background:#1B1815;color:#F8F4EC">View code <span style="font-size: 14px; line-height: 1">&#8599;</span></a>
+      </div>
+
+      <div style="position: relative; width: 100%; aspect-ratio: 16 / 9; margin-top: clamp(32px, 6vh, 56px); background: #1B1815; overflow: hidden; border: 1px solid rgba(33,30,26,0.14)">
+        <sc-if value="{{ p.image }}" hint-placeholder-val="{{ false }}">
+          <div role="img" aria-label="{{ p.title }}" style="position: absolute; inset: 0; background: center top / cover no-repeat; background-image: {{ imageBg }}"></div>
+        </sc-if>
+      </div>
+
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: clamp(28px, 5vw, 72px); margin-top: clamp(40px, 7vh, 72px)">
+
+        <aside style="display: flex; flex-direction: column; gap: 28px">
+          <div>
+            <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">Role</div>
+            <div style="margin-top: 10px; font-size: 15px; font-weight: 300; line-height: 1.6">{{ p.role }}</div>
+          </div>
+          <div>
+            <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">Built with</div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px">
+              <sc-for list="{{ p.tech }}" as="t" hint-placeholder-count="5">
+                <span style="padding: 5px 11px; border: 1px solid rgba(33,30,26,0.25); font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E">{{ t }}</span>
+              </sc-for>
+            </div>
+          </div>
+          <sc-if value="{{ p.hosting }}" hint-placeholder-val="{{ false }}">
+            <div>
+              <div style="font-size: 10px; letter-spacing: 0.24em; text-transform: uppercase; color: #6B5F51">Hosting</div>
+              <div style="margin-top: 10px; font-size: 15px; font-weight: 300; line-height: 1.6">{{ p.hosting }}</div>
+            </div>
+          </sc-if>
+        </aside>
+
+        <div style="display: flex; flex-direction: column; gap: clamp(32px, 6vh, 48px)">
+          <sc-for list="{{ p.sections }}" as="s" hint-placeholder-count="3">
+            <div style="padding-top: 22px; border-top: 1px solid rgba(33,30,26,0.16)">
+              <h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-style: italic; font-size: clamp(22px, 2.4vw, 28px); line-height: 1.2">{{ s.h }}</h2>
+              <sc-if value="{{ s.p }}" hint-placeholder-val="{{ true }}">
+                <p style="margin: 14px 0 0; max-width: 62ch; font-size: clamp(14px, 1.3vw, 16px); font-weight: 300; line-height: 1.75; color: #4A413A; text-wrap: pretty">{{ s.p }}</p>
+              </sc-if>
+              <sc-if value="{{ s.items }}" hint-placeholder-val="{{ false }}">
+                <div style="display: flex; flex-direction: column; margin-top: 14px">
+                  <sc-for list="{{ s.items }}" as="it" hint-placeholder-count="4">
+                    <div style="display: flex; gap: 14px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid rgba(33,30,26,0.1); font-size: clamp(14px, 1.3vw, 15.5px); font-weight: 300; line-height: 1.6; color: #3A342E">
+                      <span style="flex: 0 0 auto; width: 12px; height: 1px; background: #6B5F51; transform: translateY(-4px)"></span>
+                      <span>{{ it }}</span>
+                    </div>
+                  </sc-for>
+                </div>
+              </sc-if>
+            </div>
+          </sc-for>
+        </div>
+
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; margin-top: clamp(48px, 9vh, 88px); padding-top: 24px; border-top: 1px solid rgba(33,30,26,0.16)">
+        <a href="work.html" style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5F51">&#8592; All work</a>
+        <a href="{{ nextHref }}" style="display: flex; flex-direction: column; align-items: flex-end; gap: 6px; text-align: right">
+          <span style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: #6B5F51">Next project</span>
+          <span style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(20px, 2.4vw, 28px)">{{ nextTitle }} &#8594;</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer style="background: #14120F; color: #F6F1E8; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 20px; padding: clamp(14px, 3vh, 26px) clamp(20px, 4vw, 56px)">
+    <a href="index.html" style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(28px, 4vw, 44px); line-height: 1.1">Cailin Justine</a>
+    <div style="font-size: clamp(9px, 1vw, 11.5px); letter-spacing: 0.26em; text-transform: uppercase; color: rgba(246,241,232,0.78); text-align: center">Let's build something great.</div>
+    <div style="display: flex; justify-content: flex-end; align-items: center; gap: clamp(14px, 2.2vw, 26px)">
+      <a href="https://github.com/caijustine" target="_blank" rel="noopener" aria-label="GitHub" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
+        <img src="https://cdn.simpleicons.org/github/F6F1E8" alt="GitHub" style="width: 20px; height: 20px">
+      </a>
+      <a href="contact.html" aria-label="Email" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#F6F1E8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect><path d="m3 6 9 6.5L21 6"></path></svg>
+      </a>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const ORDER = ['ledger', 'nebula', 'roses', 'finance'];
+const PROJECTS = {
+  ledger: {
+    n: '01', kind: 'Full stack web app', title: 'Daily Work Ledger',
+    summary: 'A task-first work ledger: a daily checklist of standing duties, tap-to-log actions, a queue of everything that lands on me with its source and timestamp, and a week view. Every save freezes a snapshot of the day, so any past day can be reopened exactly as it was.',
+    code: 'https://github.com/caijustine/ledger-app', live: 'https://ledger.cailinjustine.dev',
+    image: 'assets/ledger-preview.jpg',
+    role: 'Solo project. Design, front end, back end, and deployment, built with Claude as my coding partner.',
+    tech: ['Node.js', 'SQLite', 'Docker', 'Litestream', 'Claude API', 'Slack API', 'Cloudflare', 'Claude'],
+    hosting: 'Railway, behind Cloudflare on a custom domain',
+    sections: [
+      { h: 'The problem', p: 'I needed one place to track standing duties, incoming requests, and what I actually got done each day, in a form my manager could open and read without an account.' },
+      { h: 'Features', items: [
+        'Anyone with the link sees the ledger read-only; editing needs a secret key that is never remembered between visits',
+        'Every save stores a frozen snapshot of the day, and a history view reopens any past day',
+        'Slack messages in mapped channels land in the queue automatically, and DMs become reply tasks I can answer from the app',
+        'Claude writes short daily and weekly reports from only what was logged, and I can edit them in place',
+        'Save conflicts are caught with version checks, so two tabs can’t overwrite each other'
+      ] },
+      { h: 'Under the hood', p: 'A small Node server with a JSON API over SQLite, packaged in Docker. Litestream streams every database write to S3-compatible storage and restores automatically on a fresh boot, so the data survives redeploys and host failures. Slack webhooks are verified against a signing secret before anything is accepted.' },
+      { h: 'What I learned', p: 'Running something people rely on every day: backups, DNS and custom domains, environment variables, and writing troubleshooting notes so a broken setting can be found by comparison instead of guesswork.' }
+    ]
+  },
+  nebula: {
+    n: '02', kind: 'Full stack web app', title: 'Nebula',
+    summary: 'A web app where a class submits and browses helpful resource links, with an AI chat assistant that answers questions about the submitted resources. No accounts or login required.',
+    code: 'https://github.com/caijustine/Nebula-ai-resource', live: 'https://nebula.cailinjustine.dev',
+    image: 'assets/nebula-preview.jpg',
+    role: 'Front end and back end, built with Claude as my coding partner.',
+    tech: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion', 'FastAPI', 'SQLModel', 'PostgreSQL', 'Cohere', 'Claude'],
+    hosting: '',
+    sections: [
+      { h: 'Features', items: [
+        'Submit a resource with title, URL, description, category, tags, and name, with validation',
+        'Browse and filter everything that’s been submitted',
+        'Ask the AI assistant questions about the resources in the database, with answers streamed back word by word',
+        'Admin-only delete, protected by a password header'
+      ] },
+      { h: 'Under the hood', p: 'A React and TypeScript front end talks to a FastAPI back end. The database runs on SQLite locally and PostgreSQL in production, with Alembic handling migrations. The chat endpoint builds a prompt from the current resources and streams Cohere’s reply to the browser over Server-Sent Events.' },
+      { h: 'What I learned', p: 'Designing a REST API end to end, managing database migrations, and streaming AI responses in real time instead of making people wait for the full answer.' }
+    ]
+  },
+  roses: {
+    n: '03', kind: 'Client website', title: 'Rose’s Cleaning & Janitorial',
+    summary: 'A multi-page business website for a licensed and insured family cleaning service in St. George, Utah. Plain HTML, CSS, and JavaScript, generated by a small Node script with no frameworks.',
+    code: 'https://github.com/caijustine/Rose-s-Cleaning-Booking-Website', live: 'https://roses-cleaning.com',
+    image: 'assets/roses-preview.jpg',
+    role: 'Client project. Design, build, SEO, and launch, built with Claude as my coding partner.',
+    tech: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Sentry', 'Cloudflare', 'Claude'],
+    hosting: 'Railway, behind Cloudflare on roses-cleaning.com',
+    sections: [
+      { h: 'What’s on the site', items: [
+        'Home page with services, work photos, a before-and-after slider, reviews, and a cost estimator',
+        'A page for each service and each city served: St. George, Washington, Santa Clara, Ivins, and Hurricane',
+        'Pricing, About, FAQ, and a privacy policy',
+        'A quote form that opens the visitor’s text or email app already filled in, plus one-tap call, text, and email'
+      ] },
+      { h: 'SEO built in', items: [
+        'A unique title, description, and canonical URL on every page',
+        'Structured data telling Google it’s a house cleaning business, with its services, breadcrumbs, and FAQs',
+        'Automatic sitemap and robots.txt',
+        'Written city pages instead of copy-pasted ones, which Google treats as spam',
+        'Fast loading with WebP images, self-hosted fonts, and long-lived caching'
+      ] },
+      { h: 'Under the hood', p: 'All of the content, from prices to reviews, lives in one data file, and a build script turns it into static pages. Every push to GitHub deploys automatically in about a minute, and Sentry reports any errors visitors run into.' }
+    ]
+  },
+  finance: {
+    n: '04', kind: 'In progress', title: 'Finance Tracker',
+    summary: 'In progress.',
+    code: 'https://github.com/caijustine/Finance-Tracker', live: '',
+    image: 'assets/coming-soon.jpg',
+    role: 'Solo project', tech: ['In progress'], hosting: '',
+    sections: [ { h: 'Coming soon', p: 'More details once the first version is built.' } ]
+  }
+};
+
+class Component extends DCLogic {
+  state = { key: 'ledger' };
+  componentDidMount() {
+    try {
+      const k = new URLSearchParams(window.location.search).get('p');
+      if (k && PROJECTS[k]) this.setState({ key: k });
+    } catch (e) {}
+  }
+  componentDidUpdate(_, prev) {
+    if (prev.key !== this.state.key) { try { document.title = PROJECTS[this.state.key].title + ' — Cailin Justine'; } catch (e) {} }
+  }
+  renderVals() {
+    const k = this.state.key;
+    const p = PROJECTS[k];
+    const next = ORDER[(ORDER.indexOf(k) + 1) % ORDER.length];
+    return {
+      p, noImage: !p.image,
+      imageBg: p.image ? 'url("' + p.image + '")' : 'none',
+      slotId: 'project-' + k,
+      slotText: 'Drop a screenshot of ' + p.title,
+      nextHref: 'project.html?p=' + next,
+      nextTitle: PROJECTS[next].title
+    };
+  }
+}
+</script>
+</body>
+</html>
