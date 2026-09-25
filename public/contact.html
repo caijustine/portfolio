@@ -22,6 +22,13 @@
   img { display: block; }
   input::placeholder, textarea::placeholder { color: rgba(246,241,232,0.35); }
   select option { background: #1B1815; color: #F6F1E8; }
+  /* Keep Chrome/Safari autofill from painting fields white */
+  input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus,
+  textarea:-webkit-autofill, select:-webkit-autofill {
+    -webkit-text-fill-color: #F6F1E8;
+    caret-color: #F6F1E8;
+    transition: background-color 9999999s ease-out 0s;
+  }
 </style>
 </helmet>
 
@@ -63,11 +70,13 @@
       </div>
 
       <div id="inquiry" style="padding: clamp(24px, 3.4vw, 40px); border: 1px solid rgba(246,241,232,0.18); background: rgba(246,241,232,0.03)">
+        <sc-if value="{{ notSent }}" hint-placeholder-val="{{ true }}">
         <h2 style="margin: 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-style: italic; font-size: clamp(22px, 2.4vw, 28px); line-height: 1.2; color: #F8F4EC">Send an inquiry</h2>
         <div style="margin-top: 8px; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246,241,232,0.55)">* Required</div>
+        </sc-if>
 
         <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
-          <div style="margin-top: 28px; padding: 20px 0; border-top: 1px solid rgba(246,241,232,0.16)">
+          <div role="status">
             <div style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(20px, 2.2vw, 24px); color: #F8F4EC">Thanks, {{ firstName }}.</div>
             <p style="margin: 10px 0 0; font-size: clamp(13px, 1.3vw, 15px); font-weight: 300; line-height: 1.7; color: rgba(246,241,232,0.85)">Your message is on its way. I’ll get back to you at {{ f.email }} soon.</p>
             <button type="button" onClick="{{ reset }}" style="margin-top: 18px; padding: 0 0 3px; background: none; border: 0; border-bottom: 1px solid rgba(246,241,232,0.5); color: #F6F1E8; font: inherit; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; cursor: pointer">Send another</button>
