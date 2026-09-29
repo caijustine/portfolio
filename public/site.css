@@ -87,3 +87,10 @@
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ---------- Service pages: heading above its section ---------- */
+@media (max-width: 720px) {
+  .svc-row {
+    grid-template-columns: 1fr !important;
+  }
+}
