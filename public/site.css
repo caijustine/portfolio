@@ -65,9 +65,47 @@
     order: -1;
   }
   .home-hero-art img {
-    width: min(78vw, 360px) !important;
+    width: min(76vw, 340px) !important;
     max-height: none !important;
     margin-right: 0 !important;
+  }
+  .home-hero-art {
+    margin-bottom: 14px;
+  }
+  /* Center the photo, intro, and buttons under the script */
+  .home-hero-intro {
+    align-items: center !important;
+    text-align: center !important;
+    max-width: none !important;
+  }
+  .home-hero-photo {
+    width: min(72vw, 280px) !important;
+    height: auto !important;
+    aspect-ratio: 14 / 15;
+  }
+  .home-hero-actions {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: min(100%, 300px) !important;
+  }
+  .home-hero-actions a {
+    justify-content: center !important;
+  }
+}
+
+/* ---------- Home, tablet / half-width window: wider landscape photo, buttons in a row ---------- */
+@media (min-width: 561px) and (max-width: 760px) {
+  .home-hero-photo {
+    width: min(80vw, 460px) !important;
+    aspect-ratio: 4 / 3;
+  }
+  .home-hero-intro p {
+    max-width: 52ch !important;
+  }
+  .home-hero-actions {
+    flex-direction: row !important;
+    justify-content: center !important;
+    width: 100% !important;
   }
 }
 
