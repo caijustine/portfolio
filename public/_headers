@@ -1,0 +1,8 @@
+# Cache rules for Cloudflare static assets.
+# Vendor files have the version in their name, so they never change in place.
+/vendor/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images, icons, and fonts: cache for a week, then check for a new version.
+/assets/*
+  Cache-Control: public, max-age=604800

@@ -13,9 +13,47 @@ export default {
       if (request.method !== 'POST') return json({ error: 'Method not allowed' }, 405);
       return handleContact(request, env);
     }
+    if (url.pathname === '/project' || url.pathname === '/project.html') return projectPage(request, env, url);
     return env.ASSETS.fetch(request);
   }
 };
+
+// project.html is one page for every project, so crawlers and link previews that don't run
+// JavaScript would all see the Ledger tags. Rewrite them here to match ?p=.
+// Keep these in sync with PROJECTS in public/project.html.
+const PROJECTS = {
+  ledger: {
+    title: 'Daily Work Ledger',
+    desc: 'A full stack work ledger app with daily checklists, Slack-fed task queues, and AI-written reports. Built with Node.js, SQLite, and Docker by Cailin Justine.'
+  },
+  nebula: {
+    title: 'Nebula',
+    desc: 'A web app where a class submits and browses helpful resource links, with an AI chat assistant that answers questions about them. Built with React, FastAPI, and PostgreSQL.'
+  },
+  roses: {
+    title: 'Rose’s Cleaning & Janitorial',
+    desc: 'A fast, SEO-ready business website for a family cleaning service in St. George, Utah, with service and city pages and a price estimator. Built by Cailin Justine.'
+  },
+  finance: { title: 'Finance Tracker', desc: 'A personal finance tracker in progress by Cailin Justine.', noindex: true }
+};
+
+async function projectPage(request, env, url) {
+  const res = await env.ASSETS.fetch(request);
+  const key = url.searchParams.get('p');
+  const p = PROJECTS[key];
+  if (!p || !res.ok) return res;
+  const title = p.title + ' | Cailin Justine';
+  const canonical = 'https://cailinjustine.dev/project?p=' + key;
+  const attr = (name, value) => ({ element(el) { el.setAttribute(name, value); } });
+  return new HTMLRewriter()
+    .on('title', { element(el) { el.setInnerContent(title); } })
+    .on('meta[name="description"], meta[property="og:description"], meta[name="twitter:description"]', attr('content', p.desc))
+    .on('meta[property="og:title"], meta[name="twitter:title"]', attr('content', title))
+    .on('meta[property="og:url"]', attr('content', canonical))
+    .on('link[rel="canonical"]', attr('href', canonical))
+    .on('meta[name="robots"]', attr('content', p.noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'))
+    .transform(res);
+}
 
 async function handleContact(request, env) {
   let body;

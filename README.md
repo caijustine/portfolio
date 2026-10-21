@@ -17,9 +17,12 @@ After a deploy, do a hard refresh (Cmd + Shift + R) if the browser still shows t
 public/            everything served on the site
   *.html           the pages
   site.css         mobile / small-screen overrides (page styles are inline in each .html)
+  fonts.css        @font-face rules for the self-hosted fonts in assets/fonts/
   support.js       page runtime (generated, don't edit by hand)
-  assets/          images and the resume PDF
-worker.js          serves public/ and handles POST /api/contact
+  vendor/          React 18.3.1 UMD builds the runtime uses (self-hosted so pages don't wait on unpkg)
+  assets/          images, icons/, fonts/, and the resume PDF
+  _headers         cache rules for vendor/ and assets/
+worker.js          handles POST /api/contact and rewrites /project meta tags per ?p=
 wrangler.jsonc     Cloudflare Worker config
 ```
 
@@ -48,5 +51,9 @@ npx wrangler dev
 Opens the site at http://localhost:8787 with the contact form working. Emails aren't actually sent;
 they're saved as `.eml` files under `.wrangler/tmp/email/`.
 
-## Still to do
-- Add LinkedIn when ready.
+## Speed notes
+- Everything loads from cailinjustine.dev: no Google Fonts, unpkg, or icon CDN requests.
+- Pages whose markup has no `{{ }}` placeholders paint straight from the HTML (`html x-dc{display:block!important}` in the head)
+  and the runtime swaps in the same page when it boots. Pages with placeholders (about, contact, project) stay hidden until then.
+- If you add a placeholder to a page that paints early, either hide that piece with an `x-dc ...` rule in the head
+  (those only apply before the runtime boots; see the homepage) or switch the page back to `x-dc{display:none}`.

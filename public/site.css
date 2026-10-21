@@ -91,6 +91,9 @@
   .home-hero-actions a {
     justify-content: center !important;
   }
+  .home-hero-trust {
+    justify-content: center !important;
+  }
 }
 
 /* ---------- Home, tablet / half-width window: wider landscape photo, buttons in a row ---------- */

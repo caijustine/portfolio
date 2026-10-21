@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Web Design &amp; Development in St. George, Utah | Cailin Justine</title>
-<meta name="description" content="Web design and development in St. George, Utah. Cailin Justine builds websites, custom software, and CRM setups for small businesses.">
+<meta name="description" content="Web design and development in St. George, Utah. Fast, mobile-friendly websites with SEO built in from day one, plus CRM setup and custom software for small businesses.">
 <link rel="canonical" href="https://cailinjustine.dev/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta name="author" content="Cailin Justine">
@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Cailin Justine">
 <meta property="og:locale" content="en_US">
 <meta property="og:title" content="Web Design &amp; Development in St. George, Utah | Cailin Justine">
-<meta property="og:description" content="Web design and development in St. George, Utah. Cailin Justine builds websites, custom software, and CRM setups for small businesses.">
+<meta property="og:description" content="Web design and development in St. George, Utah. Fast, mobile-friendly websites with SEO built in from day one, plus CRM setup and custom software for small businesses.">
 <meta property="og:url" content="https://cailinjustine.dev/">
 <meta property="og:image" content="https://cailinjustine.dev/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -26,9 +26,8 @@
 <meta property="og:image:alt" content="Cailin Justine, full stack software developer">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Web Design &amp; Development in St. George, Utah | Cailin Justine">
-<meta name="twitter:description" content="Web design and development in St. George, Utah. Cailin Justine builds websites, custom software, and CRM setups for small businesses.">
+<meta name="twitter:description" content="Web design and development in St. George, Utah. Fast, mobile-friendly websites with SEO built in from day one, plus CRM setup and custom software for small businesses.">
 <meta name="twitter:image" content="https://cailinjustine.dev/assets/og-image.jpg">
-<link rel="preconnect" href="https://unpkg.com" crossorigin>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -73,6 +72,7 @@
    ],
    "sameAs": [
     "https://github.com/caijustine",
+    "https://www.linkedin.com/in/cailin-schirm",
     "https://www.instagram.com/cailinjustine/",
     "https://www.facebook.com/share/1F2pec2N7p/"
    ]
@@ -80,15 +80,27 @@
  ]
 }
 </script>
+<link rel="preload" href="/assets/fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/mrs-saint-delafield-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts.css">
+<link rel="preload" as="image" href="/assets/hero-bg.webp" imagesrcset="/assets/hero-bg-800.webp 800w, /assets/hero-bg.webp 1200w" imagesizes="100vw" fetchpriority="high">
 <link rel="stylesheet" href="/site.css">
-<script src="/support.js"></script>
+<style>html x-dc{display:block!important}
+x-dc .tour-url, x-dc .tour-play { visibility: hidden; }
+x-dc .tour .tour-chrome { display: none; }
+x-dc .tour .v0 { display: flex; padding: 0; }
+x-dc .tour-tab:first-child { background: #F1EBE1; }
+x-dc .tour-tab:first-child .tour-desc { display: block; }
+x-dc .serp-off { display: none; }
+x-dc .seo-toggle button:last-child { background: #1B1815; color: #F8F4EC; }
+</style>
+<script defer src="/vendor/react-18.3.1.production.min.js"></script>
+<script defer src="/vendor/react-dom-18.3.1.production.min.js"></script>
+<script defer src="/support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Mrs+Saint+Delafield&family=Ms+Madi&family=Allison&family=Jost:wght@300;400;500&display=swap">
 <style>
   html, body { margin: 0; padding: 0; background: #14120F; }
   * { box-sizing: border-box; }
@@ -97,10 +109,285 @@
   img { display: block; }
   @keyframes techMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   @media (prefers-reduced-motion: reduce) { [style*="techMarquee"] { animation: none !important; } }
+  /* ---------- Home sections below the first screen ---------- */
+  .hm-sec { padding: clamp(56px, 9vw, 108px) clamp(20px, 4.5vw, 56px); overflow-x: clip; }
+  .hm-wrap { max-width: 1120px; margin: 0 auto; }
+  .hm-dark { background: #1B1815; color: #F6F1E8; }
+  .hm-cream { background: #F1EBE1; color: #211E1A; }
+  .hm-sand { background: #C9BCA6; color: #211E1A; }
+  .hm-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px 32px; }
+  .hm-eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: 12.5px; letter-spacing: 0.3em; text-transform: uppercase; color: #6B5F51; }
+  .hm-dark .hm-eyebrow { color: #C9BCA6; }
+  .hm-sand .hm-eyebrow { color: #4A413A; }
+  .hm-h2 { margin: 14px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(30px, 4.6vw, 56px); line-height: 1.04; text-transform: uppercase; text-wrap: balance; }
+  .hm-lead { margin: 16px 0 0; max-width: 46ch; font-size: clamp(15px, 1.4vw, 17.5px); font-weight: 300; line-height: 1.65; }
+  .hm-dark .hm-lead { color: rgba(246,241,232,0.78); }
+  .hm-cream .hm-lead, .hm-sand .hm-lead { color: #4A413A; }
+  .hm-link { font-size: 12.5px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; padding-bottom: 4px; border-bottom: 1px solid currentColor; transition: gap 0.2s ease, color 0.15s ease; }
+  .hm-btn { display: inline-flex; align-items: center; gap: 14px; padding: 15px 26px; font-size: clamp(12.5px, 1.3vw, 14px); letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap; border: 1px solid; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease; }
+  .hm-btn span { transition: transform 0.2s ease; }
+  .hm-btn:hover span { transform: translateX(4px); }
+  .hm-btn-light { background: #F1EBE1; border-color: #F1EBE1; color: #1B1815; }
+  .hm-btn-light:hover { background: #C9BCA6; border-color: #C9BCA6; color: #1B1815; }
+  .hm-btn-dark { background: #1B1815; border-color: #1B1815; color: #F8F4EC; }
+  .hm-btn-dark:hover { background: #4A413A; border-color: #4A413A; color: #F8F4EC; }
+  .hm-btn-ghost { border-color: rgba(246,241,232,0.6); color: #F8F4EC; }
+  .hm-btn-ghost:hover { background: #F1EBE1; border-color: #F1EBE1; color: #1B1815; }
+
+  /* Services */
+  .svc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: clamp(28px, 5vw, 48px); }
+  .svc-card { position: relative; display: flex; flex-direction: column; padding: clamp(24px, 2.6vw, 34px); background: linear-gradient(160deg, #2B251F 0%, #1F1B17 55%, #1B1815 100%); border: 1px solid rgba(201,188,166,0.2); color: #F6F1E8; overflow: hidden; transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease; }
+  .svc-card::before { content: ""; position: absolute; inset: -40% -40% auto auto; width: 70%; aspect-ratio: 1; background: radial-gradient(circle, rgba(201,188,166,0.22), transparent 65%); opacity: 0.4; transition: opacity 0.3s ease; pointer-events: none; }
+  .svc-card:hover { color: #F6F1E8; transform: translateY(-4px); border-color: rgba(201,188,166,0.7); box-shadow: 0 24px 50px -28px rgba(0,0,0,0.8); }
+  .svc-card:hover::before { opacity: 1; }
+  .svc-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+  .svc-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; background: rgba(201,188,166,0.14); border: 1px solid rgba(201,188,166,0.35); }
+  .svc-tag { padding: 5px 10px; background: #C9BCA6; color: #1B1815; font-size: 10.5px; letter-spacing: 0.2em; text-transform: uppercase; }
+  .svc-card h3 { margin: 24px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(23px, 2.2vw, 28px); line-height: 1.15; color: #F8F4EC; }
+  .svc-card p { margin: 10px 0 0; font-size: 15.5px; font-weight: 300; line-height: 1.6; color: rgba(246,241,232,0.74); }
+  .svc-foot { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 30px; border-top: 0; }
+  .svc-more { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9BCA6; }
+  .svc-price { font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #C9BCA6; }
+  .svc-price b { display: block; margin-top: 4px; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: 34px; line-height: 1; letter-spacing: 0; color: #F8F4EC; }
+  .svc-price b small { font-family: 'Jost', system-ui, sans-serif; font-size: 12px; letter-spacing: 0.16em; color: rgba(246,241,232,0.6); }
+  .svc-arrow { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(246,241,232,0.35); font-size: 17px; transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease; }
+  .svc-card:hover .svc-arrow { background: #F1EBE1; color: #1B1815; transform: rotate(-45deg); }
+
+  /* SEO before/after */
+  .seo-grid { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: clamp(36px, 6vw, 80px); align-items: center; }
+  .seo-toggle { display: inline-flex; margin-top: 28px; padding: 4px; background: #E4DACB; border: 1px solid rgba(33,30,26,0.12); border-radius: 999px; }
+  .seo-toggle button { appearance: none; border: 0; background: transparent; padding: 10px 18px; border-radius: 999px; font: inherit; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #4A413A; cursor: pointer; transition: background 0.2s ease, color 0.2s ease; }
+  .seo-toggle button[aria-pressed="true"] { background: #1B1815; color: #F8F4EC; }
+  .seo-toggle button:focus-visible, .hm-btn:focus-visible, .svc-card:focus-visible, .proj:focus-visible { outline: 2px solid #6B5F51; outline-offset: 3px; }
+  .seo-list { list-style: none; margin: 26px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 20px; font-size: 15px; }
+  .seo-list li { display: flex; gap: 10px; align-items: center; transition: opacity 0.3s ease; }
+  .seo-list li i { flex: 0 0 auto; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #1B1815; color: #F1EBE1; font-style: normal; font-size: 11px; transition: background 0.3s ease; }
+  [data-seo="off"] .seo-list li { opacity: 0.45; }
+  [data-seo="off"] .seo-list li i { background: #A69A8A; }
+  .serp-wrap { position: relative; }
+  .serp-wrap::before { content: ""; position: absolute; inset: 8% -6% -8% 10%; background: linear-gradient(135deg, #C9BCA6, #6B5F51); opacity: 0.55; filter: blur(2px); }
+  .serp { position: relative; padding: clamp(18px, 2.6vw, 28px); background: #FFFFFF; border: 1px solid rgba(33,30,26,0.12); box-shadow: 0 30px 70px -36px rgba(33,30,26,0.55); font-family: Arial, Helvetica, sans-serif; color: #202124; }
+  .serp-q { display: flex; align-items: center; gap: 10px; padding: 10px 16px; border: 1px solid #DFE1E5; border-radius: 999px; font-size: 14px; color: #3C4043; }
+  .serp-q span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .serp-meta { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 18px; font-size: 12px; color: #70757A; }
+  .serp-rank { padding: 4px 10px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.04em; white-space: nowrap; }
+  .serp-res { margin-top: 12px; }
+  .serp-site { display: flex; align-items: center; gap: 10px; }
+  .serp-fav { flex: 0 0 auto; display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #F1EBE1; border: 1px solid #DADCE0; font-size: 12px; color: #6B5F51; }
+  .serp-site div { min-width: 0; line-height: 1.3; }
+  .serp-url { font-size: 12px; color: #4D5156; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .serp-title { margin-top: 8px; font-size: clamp(17px, 1.7vw, 20px); line-height: 1.3; color: #1A0DAB; }
+  .serp-desc { margin-top: 6px; font-size: 14px; line-height: 1.55; color: #4D5156; }
+  .serp-extra { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 10px; font-size: 13px; color: #4D5156; }
+  .serp-extra b { color: #E37400; font-weight: 400; letter-spacing: 0.05em; }
+  [data-seo="on"] .serp-off, [data-seo="off"] .serp-on { display: none; }
+  .serp-on .serp-rank { background: #E6F4EA; color: #137333; }
+  .serp-off .serp-rank { background: #FCE8E6; color: #C5221F; }
+  .serp-off .serp-title { color: #681DA8; }
+
+  /* Process: feature tour */
+  .tour { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(24px, 4vw, 56px); align-items: center; margin-top: clamp(28px, 5vw, 48px); }
+  .tour-side { display: flex; flex-direction: column; min-width: 0; }
+  .tour-tabs { display: flex; flex-direction: column; gap: 6px; }
+  .tour-tab { position: relative; appearance: none; border: 0; text-align: left; cursor: pointer; display: grid; gap: 4px; padding: 18px 22px 20px; background: transparent; color: #211E1A; font: inherit; overflow: hidden; transition: background 0.25s ease; }
+  .tour-tab:hover { background: rgba(241,235,225,0.35); }
+  .tour-tab[aria-selected="true"] { background: #F1EBE1; box-shadow: 0 18px 40px -28px rgba(33,30,26,0.6); }
+  .tour-tab:focus-visible { outline: 2px solid #211E1A; outline-offset: 2px; }
+  .tour-step { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: #4A413A; }
+  .tour-name { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(19px, 1.9vw, 23px); line-height: 1.2; }
+  .tour-desc { display: none; max-width: 42ch; font-size: 15px; font-weight: 300; line-height: 1.55; color: #4A413A; }
+  .tour-tab[aria-selected="true"] .tour-desc { display: block; }
+  .tour-bar { position: absolute; left: 0; bottom: 0; height: 2px; width: 0; background: #211E1A; }
+  .tour-tab[aria-selected="true"] .tour-bar { animation: tourBar 6.5s linear forwards; }
+  .tour[data-paused="true"] .tour-tab[aria-selected="true"] .tour-bar { animation: none; width: 100%; }
+  @keyframes tourBar { to { width: 100%; } }
+  .tour-stage { position: relative; }
+  .tour-play { align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; margin: 10px 0 0 22px; appearance: none; border: 1px solid rgba(33,30,26,0.35); border-radius: 999px; background: transparent; padding: 6px 12px; font: inherit; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: #211E1A; cursor: pointer; }
+  .tour-play:hover { background: #F1EBE1; }
+  .tour-play:focus-visible { outline: 2px solid #211E1A; outline-offset: 2px; }
+  .tour-stage::before { content: ""; position: absolute; inset: 10% -4% -6% 8%; background: linear-gradient(135deg, #6B5F51, #1B1815); }
+  .tour-win { position: relative; background: #F8F4EC; border: 1px solid rgba(33,30,26,0.2); box-shadow: 0 40px 80px -40px rgba(20,18,15,0.7); height: 420px; overflow: hidden; display: flex; flex-direction: column; }
+  .tour-chrome { display: flex; align-items: center; gap: 6px; padding: 12px 14px; background: #E4DACB; border-bottom: 1px solid rgba(33,30,26,0.12); }
+  .tour-chrome i { width: 10px; height: 10px; border-radius: 50%; background: #C9BCA6; }
+  .tour-url { flex: 1; min-width: 0; margin-left: 10px; padding: 5px 12px; border-radius: 999px; background: #F8F4EC; font-size: 12px; color: #6B5F51; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .tour-view { display: none; flex: 1; padding: clamp(18px, 2.6vw, 30px); color: #211E1A; }
+  .tour[data-step="0"] .v0, .tour[data-step="1"] .v1, .tour[data-step="2"] .v2, .tour[data-step="3"] .v3 { display: block; animation: tourIn 0.45s ease both; }
+  @keyframes tourIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .tour-caption { position: relative; margin-top: 14px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #4A413A; text-align: right; }
+
+  /* Step 1 looks like a Messages thread */
+  .tour[data-step="0"] .tour-chrome { display: none; }
+  .tour[data-step="0"] .v0 { display: flex; padding: 0; }
+  .im { flex: 1; display: flex; flex-direction: column; background: #FFFFFF; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; color: #000000; -webkit-font-smoothing: antialiased; }
+  .im-head { display: grid; grid-template-columns: 40px 1fr 40px; align-items: center; padding: 10px 14px 8px; background: rgba(249,249,249,0.94); border-bottom: 1px solid #E5E5EA; }
+  .im-back { font-size: 34px; line-height: 0.8; color: #007AFF; }
+  .im-contact { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+  .im-avatar { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(180deg, #A5ABB8, #858994); color: #FFFFFF; font-size: 19px; font-weight: 500; }
+  .im-name { font-size: 11.5px; color: #000000; }
+  .im-video { justify-self: end; }
+  .im-body { flex: 1; display: flex; flex-direction: column; gap: 2px; padding: 12px 14px 10px; }
+  .im-time { margin: 0 0 10px; text-align: center; font-size: 11px; line-height: 1.35; color: #8E8E93; }
+  .im-time b { font-weight: 500; }
+  .im-b { position: relative; margin: 0; max-width: 72%; padding: 7px 12px; border-radius: 18px; font-size: 15px; line-height: 1.3; }
+  .im-in { align-self: flex-start; background: #E9E9EB; color: #000000; }
+  .im-out { align-self: flex-end; background: #007AFF; color: #FFFFFF; }
+  .im-in + .im-out { margin-top: 10px; }
+  .im-tail { margin-bottom: 2px; }
+  .im-tail::before, .im-tail::after { content: ""; position: absolute; bottom: 0; height: 18px; }
+  .im-tail::before { left: -7px; width: 20px; background: #E9E9EB; border-bottom-right-radius: 16px 14px; }
+  .im-tail::after { left: -10px; width: 10px; background: #FFFFFF; border-bottom-right-radius: 10px; }
+  .im-file { position: relative; align-self: flex-end; display: flex; align-items: center; gap: 10px; max-width: 72%; margin-top: 2px; padding: 9px 14px 9px 10px; border-radius: 18px; background: #007AFF; color: #FFFFFF; }
+  .im-tail-out::before, .im-tail-out::after { content: ""; position: absolute; bottom: 0; height: 18px; }
+  .im-tail-out::before { right: -7px; width: 20px; background: #007AFF; border-bottom-left-radius: 16px 14px; }
+  .im-tail-out::after { right: -10px; width: 10px; background: #FFFFFF; border-bottom-left-radius: 10px; }
+  .im-file-icon { flex: 0 0 auto; display: grid; place-items: center; width: 30px; height: 38px; border-radius: 4px; background: #FFFFFF; color: #E5322D; font-size: 9px; font-weight: 700; }
+  .im-file b { display: block; font-size: 14px; font-weight: 600; }
+  .im-file small { display: block; font-size: 11.5px; opacity: 0.85; }
+  .im-status { align-self: flex-end; margin-top: 3px; font-size: 11px; color: #8E8E93; }
+  .im-input { display: flex; align-items: center; gap: 10px; padding: 8px 12px 12px; }
+  .im-plus { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: #E9E9EB; color: #8E8E93; font-size: 20px; line-height: 1; }
+  .im-field { flex: 1; padding: 6px 14px; border: 1px solid #D1D1D6; border-radius: 18px; font-size: 14.5px; color: #C7C7CC; }
+
+  .map { display: flex; flex-direction: column; align-items: center; gap: 22px; padding-top: 6px; }
+  .map-node { padding: 9px 16px; background: #1B1815; color: #F6F1E8; font-size: 13px; letter-spacing: 0.08em; text-align: center; }
+  .map-root { position: relative; padding: 10px 28px; }
+  .map-root::after { content: ""; position: absolute; left: 50%; top: 100%; width: 1px; height: 22px; background: #A69A8A; }
+  .map-cols { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; width: 100%; padding-top: 0; border-top: 1px solid #A69A8A; }
+  .map-col { display: flex; flex-direction: column; gap: 8px; padding-top: 14px; }
+  .map-leaf { padding: 8px 10px; background: #FFFFFF; border: 1px solid rgba(33,30,26,0.14); font-size: 13px; text-align: center; color: #4A413A; }
+
+  /* Step 3: a draft site on a preview link, with review comments */
+  .v2 { position: relative; }
+  .pv { position: relative; display: flex; flex-direction: column; gap: 12px; font-family: 'Jost', system-ui, sans-serif; }
+  .pv-nav { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding-bottom: 10px; border-bottom: 1px solid rgba(33,30,26,0.1); }
+  .pv-logo { font-family: 'Playfair Display', Georgia, serif; font-size: 16px; color: #1F4E5F; }
+  .pv-logo b { font-weight: 500; margin-left: 3px; color: #2E8C9A; }
+  .pv-links { display: flex; gap: 14px; font-size: 11.5px; letter-spacing: 0.08em; color: #4A413A; }
+  .pv-hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); gap: 16px; align-items: center; padding: 18px; background: linear-gradient(135deg, #EAF4F4, #F7FBFA); border-radius: 6px; }
+  .pv-copy { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .pv-kicker { font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2E8C9A; }
+  .pv-h { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(18px, 1.8vw, 22px); line-height: 1.15; color: #1F2D33; }
+  .pv-sub { font-size: 12.5px; color: #4D5A5F; }
+  .pv-cta { position: relative; align-self: flex-start; margin-top: 6px; padding: 8px 16px; border-radius: 999px; background: #2E8C9A; color: #FFFFFF; font-size: 12px; font-weight: 500; letter-spacing: 0.04em; box-shadow: 0 0 0 2px #F7FBFA, 0 0 0 4px #F2A33A; }
+  .pv-pin { position: absolute; top: -14px; right: -16px; display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50% 50% 50% 0; background: #F2A33A; color: #FFFFFF; font-size: 11px; font-weight: 600; box-shadow: 0 4px 10px -4px rgba(0,0,0,0.4); }
+  .pv-photo { position: relative; display: block; aspect-ratio: 16 / 11; border-radius: 6px; overflow: hidden; background: linear-gradient(160deg, #BFDCDD 0%, #8FC1C4 55%, #6FA9AE 100%); }
+  .pv-photo::before { content: ""; position: absolute; left: 12%; right: 12%; bottom: 0; height: 46%; background: #F7FBFA; border-radius: 4px 4px 0 0; opacity: 0.85; }
+  .pv-photo::after { content: ""; position: absolute; left: 22%; bottom: 46%; width: 56%; height: 26%; background: #E7F1F1; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+  .pv-photo i { position: absolute; right: 14%; top: 14%; width: 16%; aspect-ratio: 1; border-radius: 50%; background: #FFF3D6; }
+  .pv-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .pv-cards span { display: flex; align-items: center; gap: 8px; padding: 10px; background: #FFFFFF; border: 1px solid rgba(33,30,26,0.1); border-radius: 6px; font-size: 12.5px; color: #1F2D33; }
+  .pv-cards i { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #EAF4F4; color: #2E8C9A; font-style: normal; font-size: 12px; }
+  .pv-thread { position: absolute; right: -6px; bottom: -10px; width: min(260px, 64%); display: flex; flex-direction: column; gap: 6px; padding: 10px; background: #FFFFFF; border: 1px solid rgba(33,30,26,0.12); border-radius: 8px; box-shadow: 0 18px 40px -18px rgba(20,18,15,0.55); }
+  .pv-c { display: flex; gap: 8px; align-items: flex-start; font-size: 12.5px; line-height: 1.35; color: #211E1A; }
+  .pv-c b { display: block; font-size: 11.5px; font-weight: 500; }
+  .pv-c small { margin-left: 4px; font-weight: 400; color: #8E8E93; }
+  .pv-av { flex: 0 0 auto; display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #F2A33A; color: #FFFFFF; font-size: 10.5px; font-weight: 600; }
+  .pv-av-me { background: #1B1815; color: #F1EBE1; }
+  .pv-reply { padding-top: 6px; border-top: 1px solid rgba(33,30,26,0.08); }
+
+  .live { display: flex; flex-direction: column; gap: 18px; }
+  .live-status { display: inline-flex; align-self: flex-start; align-items: center; gap: 10px; padding: 9px 16px; border-radius: 999px; background: #E6F4EA; color: #137333; font-size: 14px; }
+  .live-dot { width: 9px; height: 9px; border-radius: 50%; background: #1E8E3E; box-shadow: 0 0 0 4px rgba(30,142,62,0.2); }
+  .live-checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+  .live-checks li { display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: #FFFFFF; border: 1px solid rgba(33,30,26,0.12); font-size: 14.5px; }
+  .live-checks i { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #1B1815; color: #F1EBE1; font-style: normal; font-size: 11px; }
+
+  /* Projects */
+  .proj-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 2.6vw, 32px); margin-top: clamp(28px, 5vw, 48px); }
+  .proj { display: flex; flex-direction: column; color: #F6F1E8; }
+  .proj:hover { color: #F6F1E8; }
+  .proj-img { position: relative; display: block; aspect-ratio: 16 / 10; max-width: 100%; overflow: hidden; background: #2B251F; border: 1px solid rgba(201,188,166,0.2); }
+  .proj-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform 0.5s ease; }
+  .proj-img::after { content: "View project \2192"; position: absolute; inset: auto 0 0 0; padding: 40px 18px 16px; background: linear-gradient(transparent, rgba(20,18,15,0.9)); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #F8F4EC; opacity: 0; transform: translateY(8px); transition: opacity 0.25s ease, transform 0.25s ease; }
+  .proj:hover .proj-img img { transform: scale(1.05); }
+  .proj:hover .proj-img::after, .proj:focus-visible .proj-img::after { opacity: 1; transform: none; }
+  .proj-kind { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .proj-kind span { padding: 4px 9px; border: 1px solid rgba(201,188,166,0.35); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: #C9BCA6; }
+  .proj-kind span:first-child { background: #C9BCA6; border-color: #C9BCA6; color: #1B1815; }
+  .proj-title { margin-top: 12px; font-family: 'Playfair Display', Georgia, serif; font-size: clamp(21px, 2.1vw, 26px); line-height: 1.2; color: #F8F4EC; }
+  .proj-desc { margin-top: 6px; font-size: 15px; font-weight: 300; line-height: 1.55; color: rgba(246,241,232,0.72); }
+
+  /* Two paths */
+  .paths { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .path { display: flex; flex-direction: column; padding: clamp(28px, 4vw, 52px); }
+  .path-biz { background: radial-gradient(120% 140% at 100% 0%, #4A413A 0%, #1B1815 60%); color: #F6F1E8; }
+  .path-hire { background: #E4DACB; color: #211E1A; border: 1px solid rgba(33,30,26,0.12); }
+  .path h2 { margin: 14px 0 0; font-family: 'Playfair Display', Georgia, serif; font-weight: 400; font-size: clamp(26px, 3vw, 38px); line-height: 1.08; text-transform: uppercase; text-wrap: balance; }
+  .path p { margin: 12px 0 0; max-width: 40ch; font-size: 16px; font-weight: 300; line-height: 1.6; }
+  .path-biz p { color: rgba(246,241,232,0.8); }
+  .path-hire p { color: #4A413A; }
+  .path-hire .hm-eyebrow { color: #4A413A; }
+  .path-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 26px; margin-top: auto; padding-top: 30px; }
+
+  /* Scroll-in motion where the browser supports it; content is fully visible otherwise. */
+  @supports (animation-timeline: view()) {
+    @media (prefers-reduced-motion: no-preference) {
+      .hm-rise { animation: hmRise linear both; animation-timeline: view(); animation-range: entry 0% entry 55%; }
+      @keyframes hmRise { from { transform: translateY(28px); } to { transform: none; } }
+    }
+  }
+  @media (prefers-reduced-motion: reduce) { .tour-view { animation: none !important; } .tour-tab[aria-selected="true"] .tour-bar { animation: none !important; width: 100%; } .svc-card, .proj-img img, .hm-btn span, .svc-arrow { transition: none !important; } }
+
+  /* Tablet and small laptops */
+  @media (max-width: 980px) {
+    .svc-grid { grid-template-columns: 1fr; gap: 12px; }
+    .svc-card { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; column-gap: 22px; }
+    .svc-top { grid-row: 1 / span 2; }
+    .svc-top .svc-tag { display: none; }
+    .svc-card h3 { margin: 0; }
+    .svc-card p { margin-top: 4px; }
+    .svc-foot { grid-column: 3; grid-row: 1 / span 2; flex-direction: column; align-items: flex-end; gap: 12px; padding-top: 0; text-align: right; }
+    .seo-grid { grid-template-columns: 1fr; }
+    .serp-wrap { max-width: 620px; }
+    .tour { grid-template-columns: 1fr; }
+    .pv-hero { padding: 14px 16px; }
+    .pv { gap: 10px; }
+    .tour-stage::before { inset: 8% -3% -4% 6%; }
+    .proj-row { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-left: calc(-1 * clamp(20px, 4.5vw, 56px)); margin-right: calc(-1 * clamp(20px, 4.5vw, 56px)); padding: 0 clamp(20px, 4.5vw, 56px) 6px; scroll-padding: 0 clamp(20px, 4.5vw, 56px); }
+    .proj-row::-webkit-scrollbar { display: none; }
+    .proj { flex: 0 0 min(46%, 380px); scroll-snap-align: start; }
+    .proj-hint { display: flex !important; }
+  }
+
+  /* Phones */
+  @media (max-width: 600px) {
+    .hm-sec { padding-top: 56px; padding-bottom: 56px; }
+    .svc-card { grid-template-columns: auto minmax(0, 1fr); row-gap: 14px; padding: 20px; }
+    .svc-icon { width: 44px; height: 44px; }
+    .svc-foot { grid-column: 1 / -1; grid-row: auto; flex-direction: row; align-items: center; padding-top: 14px; border-top: 1px solid rgba(201,188,166,0.18); text-align: left; }
+    .svc-price b { display: inline; margin: 0 0 0 6px; font-size: 26px; }
+    .svc-arrow { width: 36px; height: 36px; }
+    .seo-list { grid-template-columns: 1fr 1fr; font-size: 14px; gap: 10px 12px; }
+    .seo-toggle { display: flex; }
+    .seo-toggle button { flex: 1; padding: 10px 8px; letter-spacing: 0.12em; }
+    .serp-wrap::before { inset: 6% -3% -5% 6%; }
+    .tour-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .tour-tab { padding: 12px 14px 14px; align-content: start; }
+    .tour-play { margin: 10px 0 0; }
+    .tour-name { font-size: 16px; }
+    .tour-tab[aria-selected="true"] .tour-desc { display: none; }
+    .tour-win { height: 470px; }
+    .pv-hero { grid-template-columns: minmax(0, 1fr) 34%; padding: 14px; gap: 10px; }
+    .pv-links span:nth-child(2) { display: none; }
+    .pv-cards span { padding: 8px 6px; font-size: 11.5px; gap: 5px; }
+    .pv-thread { position: static; width: auto; margin-top: 2px; }
+    .pv { gap: 8px; }
+    .pv-nav { padding-bottom: 8px; }
+    .pv-sub { font-size: 12px; }
+    .im-b, .im-file { max-width: 82%; font-size: 14.5px; }
+    .map-cols { gap: 8px; }
+    .map-leaf { padding: 7px 4px; font-size: 12px; }
+    .note { max-width: 72%; }
+    .hm-head .hm-btn { width: 100%; justify-content: center; }
+    .proj { flex-basis: 82%; }
+    .paths { grid-template-columns: 1fr; gap: 12px; }
+    .path-actions .hm-btn { flex: 1 1 auto; justify-content: center; }
+  }
 </style>
 </helmet>
 
-<div class="home-shell" style="font-family: 'Jost', system-ui, sans-serif; background: #14120F; color: #F6F1E8; height: 100vh; display: flex; flex-direction: column; overflow: hidden">
+<div style="font-family: 'Jost', system-ui, sans-serif; background: #14120F; color: #F6F1E8">
+<div class="home-shell" style="min-height: 100vh; display: flex; flex-direction: column">
 
   <header class="site-header" style="display: flex; align-items: center; justify-content: space-between; gap: 24px; background: #F1EBE1; color: #211E1A; padding: 10px clamp(18px, 4vw, 44px)">
     <a href="#top" style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; letter-spacing: 0.01em; white-space: nowrap">Cailin Justine</a>
@@ -114,7 +401,7 @@
 
   <section id="top" class="home-hero" data-screen-label="Hero" style="position: relative; flex: 1; min-height: 0; display: flex; align-items: center; background: #1B1815; overflow: hidden">
     <div style="position: absolute; inset: 0">
-      <img width="1200" height="675" fetchpriority="high" decoding="async" src="assets/hero-bg.webp" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
+      <img width="1200" height="675" fetchpriority="high" decoding="async" src="assets/hero-bg.webp" srcset="assets/hero-bg-800.webp 800w, assets/hero-bg.webp 1200w" sizes="100vw" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
     </div>
     <div style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(14,12,10,0.86) 0%, rgba(14,12,10,0.66) 48%, rgba(14,12,10,0.5) 100%); pointer-events: none"></div>
 
@@ -125,25 +412,24 @@
           <img width="576" height="432" fetchpriority="high" decoding="async" src="assets/hero-portrait.webp" alt="Cailin Justine" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block">
         </div>
         <div class="home-hero-rule" style="flex: 0 0 auto; width: clamp(90px, 14vw, 150px); height: 1px; background: rgba(248,244,236,0.55); margin: clamp(8px, 1.8vh, 28px) 0"></div>
-        <p style="flex: 0 0 auto; margin: 0; max-width: 42ch; font-size: clamp(14.5px, 1.48vw, 17.5px); font-weight: 300; line-height: 1.65; color: rgba(246,241,232,0.88)">Full stack developer in St. George, Utah, building websites, custom software, and CRMs for small businesses.</p>
+        <p style="flex: 0 0 auto; margin: 0; max-width: 42ch; font-size: clamp(14.5px, 1.48vw, 17.5px); font-weight: 300; line-height: 1.65; color: rgba(246,241,232,0.88)">Fast, search-ready websites, CRMs, and custom software for small businesses. Built by a full stack developer in St. George, Utah.</p>
         <div class="home-hero-actions" style="pointer-events: auto; flex: 0 0 auto; display: flex; flex-wrap: wrap; gap: 10px; margin-top: clamp(8px, 2vh, 30px);">
-          <a href="/work" style="display: inline-flex; align-items: center; gap: 12px; padding: 12px clamp(12px, 1.5vw, 24px); border: 1px solid rgba(248,244,236,0.7); font-size: clamp(12.5px, 1.33vw, 14.5px); letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; color: #F8F4EC; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815;border-color:#F1EBE1">
+          <a href="/contact" style="display: inline-flex; align-items: center; gap: 12px; padding: 12px clamp(14px, 1.6vw, 26px); background: #F1EBE1; border: 1px solid #F1EBE1; font-size: clamp(12.5px, 1.33vw, 14.5px); letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; color: #1B1815; transition: background 0.15s ease, color 0.15s ease" style-hover="background:transparent;color:#F8F4EC">
+            Get a free quote
+            <span style="font-size: 16.5px; line-height: 1">&#8594;</span>
+          </a>
+          <a href="/work" style="display: inline-flex; align-items: center; gap: 12px; padding: 12px clamp(14px, 1.6vw, 26px); border: 1px solid rgba(248,244,236,0.7); font-size: clamp(12.5px, 1.33vw, 14.5px); letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; color: #F8F4EC; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815;border-color:#F1EBE1">
             View my work
             <span style="font-size: 16.5px; line-height: 1">&#8594;</span>
           </a>
-          <a href="/about#ai" style="display: inline-flex; align-items: center; gap: 12px; padding: 12px clamp(12px, 1.5vw, 24px); border: 1px solid rgba(248,244,236,0.7); font-size: clamp(12.5px, 1.33vw, 14.5px); letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; color: #F8F4EC; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815;border-color:#F1EBE1">
-            My thoughts on AI
-            <span style="font-size: 16.5px; line-height: 1">&#8594;</span>
-          </a>
-          <a href="/services" style="display: inline-flex; align-items: center; gap: 12px; padding: 12px clamp(12px, 1.5vw, 24px); background: #F1EBE1; border: 1px solid #F1EBE1; font-size: clamp(12.5px, 1.33vw, 14.5px); letter-spacing: 0.16em; text-transform: uppercase; white-space: nowrap; color: #1B1815; transition: background 0.15s ease, color 0.15s ease" style-hover="background:transparent;color:#F8F4EC">
-            My services
-            <span style="font-size: 16.5px; line-height: 1">&#8594;</span>
-          </a>
+        </div>
+        <div class="home-hero-trust" style="flex: 0 0 auto; display: flex; flex-wrap: wrap; gap: 6px 18px; margin-top: clamp(10px, 1.8vh, 20px); font-size: clamp(11px, 1.1vw, 12.5px); letter-spacing: 0.18em; text-transform: uppercase; color: rgba(246,241,232,0.7)">
+          <span>SEO included</span><span aria-hidden="true">&middot;</span><span>Free quotes</span><span aria-hidden="true">&middot;</span><span>Open to internships</span>
         </div>
       </div>
 
       <div class="home-hero-art" style="justify-self: end; align-self: center; min-height: 0; display: flex; flex-direction: column; align-items: flex-end; gap: clamp(18px, 4.5vh, 48px); padding-right: clamp(0px, 1vw, 16px)">
-        <h1 style="margin: 0; font-size: inherit; line-height: 0"><img width="1200" height="613" decoding="async" src="assets/software-developer.webp" alt="Cailin Justine, web designer and developer in St. George, Utah" style="display: block; width: clamp(260px, 40vw, 600px); max-height: 48vh; height: auto; object-fit: contain; margin-right: clamp(-24px, -1.5vw, 0px)"></h1>
+        <h1 style="margin: 0; font-size: inherit; line-height: 0"><span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap">Web designer and developer in St. George, Utah</span><img width="1200" height="613" decoding="async" src="assets/software-developer.webp" alt="" style="display: block; width: clamp(260px, 40vw, 600px); max-height: 48vh; height: auto; object-fit: contain; margin-right: clamp(-24px, -1.5vw, 0px)"></h1>
       </div>
 
     </div>
@@ -154,7 +440,7 @@
     <div style="position: relative; overflow: hidden; max-width: 1180px; margin: clamp(12px, 2.8vh, 30px) auto 0; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%); mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%)">
       <div style="display: flex; width: max-content; gap: clamp(18px, 3vw, 44px); padding-right: clamp(18px, 3vw, 44px); animation: techMarquee 28s linear infinite">
         <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/python/211E1A" alt="Python" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/python-211E1A.svg" alt="Python" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">Python</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
@@ -162,31 +448,31 @@
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">SQL</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/react/211E1A" alt="React" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/react-211E1A.svg" alt="React" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">React</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/typescript/211E1A" alt="TypeScript" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/typescript-211E1A.svg" alt="TypeScript" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">TypeScript</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/nodedotjs/211E1A" alt="Node.js" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/nodedotjs-211E1A.svg" alt="Node.js" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">Node.js</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/docker/211E1A" alt="Docker" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/docker-211E1A.svg" alt="Docker" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">Docker</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/git/211E1A" alt="Git" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/git-211E1A.svg" alt="Git" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">Git</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/figma/211E1A" alt="Figma" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/figma-211E1A.svg" alt="Figma" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">Figma</span>
       </div>
         <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/python/211E1A" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/python-211E1A.svg" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">Python</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
@@ -194,27 +480,27 @@
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">SQL</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/react/211E1A" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/react-211E1A.svg" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">React</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/typescript/211E1A" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/typescript-211E1A.svg" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">TypeScript</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/nodedotjs/211E1A" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/nodedotjs-211E1A.svg" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">Node.js</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/docker/211E1A" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/docker-211E1A.svg" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">Docker</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/git/211E1A" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/git-211E1A.svg" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">Git</span>
       </div>
       <div style="flex: 0 0 auto; display: flex; flex-direction: column; align-items: center; gap: 14px; width: clamp(84px, 10vw, 120px)">
-        <img src="https://cdn.simpleicons.org/figma/211E1A" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
+        <img src="/assets/icons/figma-211E1A.svg" alt="" aria-hidden="true" style="width: clamp(24px, 3.2vw, 34px); height: clamp(24px, 3.2vw, 34px); object-fit: contain">
         <span style="font-size: clamp(10px, 1.33vw, 12px); letter-spacing: 0.14em; text-transform: uppercase; color: #3A342E; text-align: center; white-space: nowrap">Figma</span>
       </div>
       </div>
@@ -234,18 +520,271 @@
     </div>
   </section>
 
-  <footer class="site-footer" id="contact" data-screen-label="Footer" style="background: #14120F; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 20px; padding: clamp(9px, 1.8vh, 24px) clamp(20px, 4vw, 56px)">
+</div>
+
+  <section class="hm-sec hm-dark" data-screen-label="Services">
+    <div class="hm-wrap">
+      <div class="hm-head hm-rise">
+        <div>
+          <h2 class="hm-h2" style="margin-top: 0">What I can build for you</h2>
+        </div>
+        <a href="/services" class="hm-link" style="color: #C9BCA6">All services &#8594;</a>
+      </div>
+      <div class="svc-grid">
+        <a href="/services/website-development" class="svc-card hm-rise">
+          <div class="svc-top">
+            <span class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9BCA6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4" width="19" height="15" rx="1.5"></rect><path d="M2.5 8h19M6 6h.01M8.5 6h.01M7 12.5h6M7 15h4"></path></svg></span>
+            <span class="svc-tag">SEO included</span>
+          </div>
+          <div><h3>Websites</h3><p>Custom sites that load fast and show up on Google.</p></div>
+          <div class="svc-foot"><span class="svc-more">Learn more</span><span class="svc-arrow" aria-hidden="true">&#8594;</span></div>
+        </a>
+        <a href="/services/crm" class="svc-card hm-rise">
+          <div class="svc-top">
+            <span class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9BCA6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"></circle><path d="M3 19.5c.6-3.3 3-5 6-5s5.4 1.7 6 5M16 5.5h5M16 9h5M18 12.5h3"></path></svg></span>
+          </div>
+          <div><h3>CRM setup</h3><p>Contacts, pipeline, and follow-ups in one place.</p></div>
+          <div class="svc-foot"><span class="svc-more">Learn more</span><span class="svc-arrow" aria-hidden="true">&#8594;</span></div>
+        </a>
+        <a href="/services/tech-management" class="svc-card hm-rise">
+          <div class="svc-top">
+            <span class="svc-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C9BCA6" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.3-3.1 7.9-7.5 9.5-4.4-1.6-7.5-5.2-7.5-9.5V6L12 3z"></path><path d="M8.8 12.2l2.2 2.2 4.2-4.4"></path></svg></span>
+          </div>
+          <div><h3>Monthly care</h3><p>Hosting, edits, Google posts, and SEO check-ins.</p></div>
+          <div class="svc-foot"><span class="svc-more">Learn more</span><span class="svc-arrow" aria-hidden="true">&#8594;</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hm-sec hm-cream" data-screen-label="SEO built in">
+    <div class="hm-wrap seo-grid" data-seo="{{ seoMode }}">
+      <div class="hm-rise">
+        <h2 class="hm-h2" style="margin-top: 0">Websites people can actually find</h2>
+        <p class="hm-lead">I manage Google Business Profiles for a living, so every site ships with the SEO groundwork done.</p>
+        <div class="seo-toggle" role="group" aria-label="Compare search results">
+          <button type="button" aria-pressed="{{ seoOffPressed }}" onClick="{{ seoOff }}">Without SEO</button>
+          <button type="button" aria-pressed="{{ seoOnPressed }}" onClick="{{ seoOn }}">With SEO</button>
+        </div>
+        <ul class="seo-list">
+          <li><i>&#10003;</i>Titles &amp; descriptions</li>
+          <li><i>&#10003;</i>Mobile-first speed</li>
+          <li><i>&#10003;</i>Service &amp; city pages</li>
+          <li><i>&#10003;</i>Schema markup</li>
+          <li><i>&#10003;</i>Sitemap &amp; indexing</li>
+          <li><i>&#10003;</i>Google profile link</li>
+        </ul>
+      </div>
+      <div class="serp-wrap hm-rise" data-nosnippet>
+        <div class="serp" aria-live="polite">
+          <div class="serp-q">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#9AA0A6" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"></circle><path d="M20 20l-4.2-4.2"></path></svg>
+            <span>house cleaning st george utah</span>
+          </div>
+          <div class="serp-on">
+            <div class="serp-meta"><span>Example result</span><span class="serp-rank">Clear &amp; clickable</span></div>
+            <div class="serp-res">
+              <div class="serp-site"><span class="serp-fav">Y</span><div><div style="font-size: 14px">Your Business</div><div class="serp-url">https://yourbusiness.com › house-cleaning › st-george</div></div></div>
+              <div class="serp-title">House Cleaning in St. George, UT | Your Business</div>
+              <div class="serp-desc">Licensed, insured house cleaning in St. George, Hurricane, and Washington. Get a free estimate online in minutes.</div>
+              <div class="serp-extra"><span><b>&#9733;&#9733;&#9733;&#9733;&#9733;</b> Reviews</span><span>Open today</span><span>Call now</span></div>
+            </div>
+          </div>
+          <div class="serp-off">
+            <div class="serp-meta"><span>Example result</span><span class="serp-rank">Easy to skip</span></div>
+            <div class="serp-res">
+              <div class="serp-site"><span class="serp-fav">?</span><div><div style="font-size: 14px">yourbusiness.com</div><div class="serp-url">https://yourbusiness.com</div></div></div>
+              <div class="serp-title">Home</div>
+              <div class="serp-desc">Welcome to our website! We are a family owned business. Click here to learn more about us and what we…</div>
+              <div class="serp-extra"><span>No reviews</span><span>No hours</span><span>No location</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hm-sec hm-sand" data-screen-label="Process">
+    <div class="hm-wrap">
+      <div class="hm-head hm-rise">
+        <h2 class="hm-h2" style="margin-top: 0">Working with me</h2>
+        <a href="/contact" class="hm-btn hm-btn-dark">Start with a quote <span>&#8594;</span></a>
+      </div>
+      <div class="tour hm-rise" data-step="{{ step }}" onMouseEnter="{{ pause }}" onMouseLeave="{{ resume }}" onFocus="{{ pause }}" onBlur="{{ resume }}">
+        <div class="tour-side">
+        <div class="tour-tabs" role="tablist" aria-label="How a project works">
+          <button type="button" class="tour-tab" role="tab" aria-selected="{{ t0 }}" onClick="{{ go0 }}">
+            <span class="tour-step">Step 1</span>
+            <span class="tour-name">You tell me about your business</span>
+            <span class="tour-desc">Send a quick message. I reply with a clear quote and a plan.</span>
+            <span class="tour-bar" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="tour-tab" role="tab" aria-selected="{{ t1 }}" onClick="{{ go1 }}">
+            <span class="tour-step">Step 2</span>
+            <span class="tour-name">We plan your pages</span>
+            <span class="tour-desc">Services, the towns you serve, and what each page needs to say.</span>
+            <span class="tour-bar" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="tour-tab" role="tab" aria-selected="{{ t2 }}" onClick="{{ go2 }}">
+            <span class="tour-step">Step 3</span>
+            <span class="tour-name">I build it, you weigh in</span>
+            <span class="tour-desc">You get a private preview link and tell me what to change.</span>
+            <span class="tour-bar" aria-hidden="true"></span>
+          </button>
+          <button type="button" class="tour-tab" role="tab" aria-selected="{{ t3 }}" onClick="{{ go3 }}">
+            <span class="tour-step">Step 4</span>
+            <span class="tour-name">It goes live and gets found</span>
+            <span class="tour-desc">Launched on your domain and connected to Google.</span>
+            <span class="tour-bar" aria-hidden="true"></span>
+          </button>
+        </div>
+        <button type="button" class="tour-play" aria-label="{{ playLabel }}" onClick="{{ togglePlay }}"><span aria-hidden="true">{{ playIcon }}</span>{{ playText }}</button>
+        </div>
+
+        <div class="tour-stage" role="tabpanel" data-nosnippet>
+          <div class="tour-win">
+            <div class="tour-chrome"><i></i><i></i><i></i><span class="tour-url">{{ stepUrl }}</span></div>
+
+            <div class="tour-view v0">
+              <div class="im">
+                <div class="im-head">
+                  <span class="im-back" aria-hidden="true">&#8249;</span>
+                  <div class="im-contact"><span class="im-avatar">M</span><span class="im-name">Maria &#8250;</span></div>
+                  <span aria-hidden="true"></span>
+                </div>
+                <div class="im-body">
+                  <div class="im-time">Today 9:41 AM</div>
+                  <p class="im-b im-in">Hi! I run a cleaning business in St. George</p>
+                  <p class="im-b im-in im-tail">I need a website that actually shows up on Google</p>
+                  <p class="im-b im-out">Happy to help!</p>
+                  <p class="im-b im-out">I’d build you home, services, and contact pages, a page for each town you serve, and set up your Google Business Profile</p>
+                  <div class="im-file im-tail-out"><span class="im-file-icon">PDF</span><span><b>Sparkle Cleaning Quote</b><small>1 page · PDF Document</small></span></div>
+                  <div class="im-status">Delivered</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tour-view v1">
+              <div class="map">
+                <div class="map-node map-root">Home</div>
+                <div class="map-cols">
+                  <div class="map-col"><div class="map-node">Services</div><div class="map-leaf">House cleaning</div><div class="map-leaf">Move-out cleaning</div><div class="map-leaf">Offices</div></div>
+                  <div class="map-col"><div class="map-node">Areas</div><div class="map-leaf">St. George</div><div class="map-leaf">Hurricane</div><div class="map-leaf">Washington</div></div>
+                  <div class="map-col"><div class="map-node">Contact</div><div class="map-leaf">Free estimate</div><div class="map-leaf">Call or text</div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tour-view v2">
+              <div class="pv">
+                <div class="pv-nav"><span class="pv-logo">Sparkle<b>Cleaning</b></span><span class="pv-links"><span>Services</span><span>Areas</span><span>Contact</span></span></div>
+                <div class="pv-hero">
+                  <div class="pv-copy">
+                    <span class="pv-kicker">St. George, Utah</span>
+                    <span class="pv-h">House cleaning you can count on</span>
+                    <span class="pv-sub">Licensed, insured, and family owned.</span>
+                    <span class="pv-cta">Book now<span class="pv-pin" aria-hidden="true">M</span></span>
+                  </div>
+                  <span class="pv-photo" aria-hidden="true"><i></i></span>
+                </div>
+                <div class="pv-cards">
+                  <span><i>&#8962;</i>Homes</span><span><i>&#9638;</i>Move-out</span><span><i>&#9636;</i>Offices</span>
+                </div>
+                <div class="pv-thread">
+                  <div class="pv-c"><span class="pv-av">M</span><div><b>Maria <small>2m</small></b>Can the button say “Book now”?</div></div>
+                  <div class="pv-c pv-reply"><span class="pv-av pv-av-me">C</span><div><b>Cailin <small>now</small></b>Done! Updated on the preview &#10003;</div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tour-view v3">
+              <div class="live">
+                <div class="live-status"><span class="live-dot"></span>Live at sparklecleaning.com</div>
+                <ul class="live-checks">
+                  <li><i>&#10003;</i>Sitemap sent to Google</li>
+                  <li><i>&#10003;</i>Google Business Profile linked</li>
+                  <li><i>&#10003;</i>Fast on phones</li>
+                  <li><i>&#10003;</i>Every page has a title and description</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="tour-caption">Example project</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hm-sec hm-dark" data-screen-label="Recent work" style="background: #14120F">
+    <div class="hm-wrap">
+      <div class="hm-head hm-rise">
+        <div>
+          <h2 class="hm-h2" style="margin-top: 0">Recent projects</h2>
+        </div>
+        <a href="/work" class="hm-link" style="color: #C9BCA6">All my work &#8594;</a>
+      </div>
+      <div class="proj-row">
+        <a href="/project?p=roses" class="proj hm-rise">
+          <span class="proj-img"><img width="1200" height="630" loading="lazy" decoding="async" src="assets/roses-preview.webp" alt="Rose's Cleaning &amp; Janitorial website"></span>
+          <span class="proj-kind"><span>Client site</span><span>SEO</span></span>
+          <span class="proj-title">Rose’s Cleaning &amp; Janitorial</span>
+          <span class="proj-desc">Service and city pages, plus a live price estimator.</span>
+        </a>
+        <a href="/project?p=ledger" class="proj hm-rise">
+          <span class="proj-img"><img width="1041" height="649" loading="lazy" decoding="async" src="assets/ledger-preview.webp" alt="Daily Work Ledger home page"></span>
+          <span class="proj-kind"><span>Web app</span><span>Node.js</span><span>Claude API</span></span>
+          <span class="proj-title">Daily Work Ledger</span>
+          <span class="proj-desc">Pulls tasks in from Slack and writes AI reports.</span>
+        </a>
+        <a href="/project?p=nebula" class="proj hm-rise">
+          <span class="proj-img"><img width="1200" height="595" loading="lazy" decoding="async" src="assets/nebula-preview.webp" alt="Nebula homepage"></span>
+          <span class="proj-kind"><span>Web app</span><span>React</span><span>FastAPI</span></span>
+          <span class="proj-title">Nebula</span>
+          <span class="proj-desc">Resource sharing with a streaming AI assistant.</span>
+        </a>
+      </div>
+      <div class="proj-hint" aria-hidden="true" style="display: none; justify-content: center; gap: 8px; margin-top: 18px; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(246,241,232,0.5)">Swipe &#8594;</div>
+    </div>
+  </section>
+
+  <section class="hm-sec hm-cream" data-screen-label="Work with me">
+    <div class="hm-wrap paths">
+      <div class="path path-biz hm-rise">
+        <div class="hm-eyebrow" style="color: #C9BCA6">For businesses</div>
+        <h2>Let’s build your website</h2>
+        <p>Tell me what you need and I’ll send a free quote.</p>
+        <div class="path-actions">
+          <a href="/contact" class="hm-btn hm-btn-light">Get a quote <span>&#8594;</span></a>
+          <a href="/services" class="hm-link" style="color: #C9BCA6">See services</a>
+        </div>
+      </div>
+      <div class="path path-hire hm-rise">
+        <div class="hm-eyebrow">For hiring teams</div>
+        <h2>Open to full stack internships</h2>
+        <p>Software Development at Dixie Technical College. Available January or Summer 2027.</p>
+        <div class="path-actions">
+          <a href="/assets/Cailin_Schirm_Resume.pdf" target="_blank" rel="noopener" class="hm-btn hm-btn-dark">View resume <span>&#8599;</span></a>
+          <a href="/about" class="hm-link" style="color: #4A413A">About me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer" id="contact" data-screen-label="Footer" style="background: #14120F; border-top: 1px solid rgba(246,241,232,0.1); display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 20px; padding: clamp(9px, 1.8vh, 24px) clamp(20px, 4vw, 56px)">
     <div style="font-family: 'Mrs Saint Delafield', cursive; font-size: clamp(28px, 4vw, 44px); line-height: 1.1; color: #F6F1E8">Cailin Justine</div>
     <div style="font-size: clamp(11.5px, 1.22vw, 14px); letter-spacing: 0.26em; text-transform: uppercase; color: rgba(246,241,232,0.78); text-align: center">Let's build something great.<div class="footer-contact" style="margin-top: 6px; font-size: clamp(10.5px, 1vw, 12px); letter-spacing: 0.12em; text-transform: none; color: rgba(246,241,232,0.55)">St. George, Utah · <a href="mailto:cailin.justineschirm@gmail.com" style="color: inherit; text-decoration: none">cailin.justineschirm@gmail.com</a></div></div>
     <div style="display: flex; justify-content: flex-end; align-items: center; gap: clamp(14px, 2.2vw, 26px)">
       <a href="https://github.com/caijustine" target="_blank" rel="noopener" aria-label="GitHub" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
-        <img src="https://cdn.simpleicons.org/github/F6F1E8" alt="GitHub" style="width: 20px; height: 20px">
+        <img src="/assets/icons/github-F6F1E8.svg" alt="GitHub" style="width: 20px; height: 20px">
+      </a>
+      <a href="https://www.linkedin.com/in/cailin-schirm" target="_blank" rel="noopener me" aria-label="LinkedIn" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F6F1E8" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"></path></svg>
       </a>
       <a href="https://www.instagram.com/cailinjustine/" target="_blank" rel="noopener me" aria-label="Instagram" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
-        <img src="https://cdn.simpleicons.org/instagram/F6F1E8" alt="Instagram" width="20" height="20" style="width: 20px; height: 20px">
+        <img src="/assets/icons/instagram-F6F1E8.svg" alt="Instagram" width="20" height="20" style="width: 20px; height: 20px">
       </a>
       <a href="https://www.facebook.com/share/1F2pec2N7p/" target="_blank" rel="noopener me" aria-label="Facebook" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
-        <img src="https://cdn.simpleicons.org/facebook/F6F1E8" alt="Facebook" width="20" height="20" style="width: 20px; height: 20px">
+        <img src="/assets/icons/facebook-F6F1E8.svg" alt="Facebook" width="20" height="20" style="width: 20px; height: 20px">
       </a>
       <a href="/contact" aria-label="Email" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
         <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#F6F1E8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2"></rect><path d="m3 6 9 6.5L21 6"></path></svg>
@@ -257,8 +796,56 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
+  state = { seo: true, step: 0, stopped: false };
+  componentDidMount() {
+    // The "Working with me" tour loops on its own, restarts at step 1 whenever it scrolls
+    // back into view, and sits still while it's off screen or under the mouse.
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this.inView = true;
+    this.restart();
+    let tries = 0;
+    const watch = () => {
+      const el = document.querySelector('.tour');
+      if (!el) { if (++tries < 20) setTimeout(watch, 150); return; }
+      if (!('IntersectionObserver' in window)) return;
+      this.io = new IntersectionObserver(([e]) => {
+        if (e.isIntersecting && !this.inView) { this.setState({ step: 0 }); this.restart(); }
+        this.inView = e.isIntersecting;
+      }, { threshold: 0.35 });
+      this.io.observe(el);
+    };
+    watch();
+  }
+  componentWillUnmount() { clearInterval(this.timer); if (this.io) this.io.disconnect(); }
+  restart() {
+    clearInterval(this.timer);
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this.timer = setInterval(() => {
+      if (!this.paused && this.inView && !this.state.stopped) this.setState(s => ({ step: (s.step + 1) % 4 }));
+    }, 6500);
+  }
   renderVals() {
-    return {};
+    const on = this.state.seo, step = this.state.step, v = {};
+    const urls = ['messages', 'sitemap · sparklecleaning.com', 'preview.sparklecleaning.com', 'sparklecleaning.com'];
+    [0, 1, 2, 3].forEach(k => {
+      v['t' + k] = k === step ? 'true' : 'false';
+      v['go' + k] = () => { this.setState({ step: k }); this.restart(); };
+    });
+    return { ...v,
+      step: String(step),
+      stepUrl: urls[step],
+      playLabel: this.state.stopped ? 'Play the walkthrough' : 'Pause the walkthrough',
+      playText: this.state.stopped ? 'Play' : 'Pause',
+      playIcon: this.state.stopped ? '▶' : '❙❙',
+      togglePlay: () => this.setState(s => ({ stopped: !s.stopped })),
+      pause: () => { this.paused = true; },
+      resume: () => { this.paused = false; },
+      seoMode: on ? 'on' : 'off',
+      seoOnPressed: on ? 'true' : 'false',
+      seoOffPressed: on ? 'false' : 'true',
+      seoOn: () => this.setState({ seo: true }),
+      seoOff: () => this.setState({ seo: false })
+    };
   }
 }
 </script>

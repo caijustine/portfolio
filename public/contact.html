@@ -28,7 +28,6 @@
 <meta name="twitter:title" content="Contact Cailin Justine | Hire a Web Developer">
 <meta name="twitter:description" content="Get in touch with Cailin Justine about a software internship, a new website, CRM setup, or Google Business Profile help. Replies by email.">
 <meta name="twitter:image" content="https://cailinjustine.dev/assets/og-image.jpg">
-<link rel="preconnect" href="https://unpkg.com" crossorigin>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -70,6 +69,7 @@
    ],
    "sameAs": [
     "https://github.com/caijustine",
+    "https://www.linkedin.com/in/cailin-schirm",
     "https://www.instagram.com/cailinjustine/",
     "https://www.facebook.com/share/1F2pec2N7p/"
    ]
@@ -77,15 +77,18 @@
  ]
 }
 </script>
+<link rel="preload" href="/assets/fonts/jost-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/mrs-saint-delafield-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/fonts.css">
 <link rel="stylesheet" href="/site.css">
-<script src="/support.js"></script>
+<style>x-dc{display:none}</style>
+<script defer src="/vendor/react-18.3.1.production.min.js"></script>
+<script defer src="/vendor/react-dom-18.3.1.production.min.js"></script>
+<script defer src="/support.js"></script>
 </head>
 <body>
 <x-dc>
 <helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Mrs+Saint+Delafield&family=Jost:wght@300;400;500&display=swap">
 <style>
   html, body { margin: 0; padding: 0; background: #14120F; }
   * { box-sizing: border-box; }
@@ -133,6 +136,10 @@
           <a href="https://github.com/caijustine" target="_blank" rel="noopener" style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: clamp(14px, 2.6vh, 20px) 0; border-bottom: 1px solid rgba(246,241,232,0.16)" style-hover="color:#C9BCA6">
             <span style="font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(246,241,232,0.55)">GitHub</span>
             <span style="flex-shrink: 0; white-space: nowrap; font-size: clamp(14.5px, 1.53vw, 17.5px); font-weight: 300">/caijustine</span>
+          </a>
+          <a href="https://www.linkedin.com/in/cailin-schirm" target="_blank" rel="noopener me" style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; padding: clamp(14px, 2.6vh, 20px) 0; border-bottom: 1px solid rgba(246,241,232,0.16)" style-hover="color:#C9BCA6">
+            <span style="font-size: 12px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(246,241,232,0.55)">LinkedIn</span>
+            <span style="flex-shrink: 0; white-space: nowrap; font-size: clamp(14.5px, 1.53vw, 17.5px); font-weight: 300">/cailin-schirm</span>
           </a>
         </div>
         <a href="assets/Cailin_Schirm_Resume.pdf" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 14px; margin-top: clamp(24px, 4vh, 36px); padding: 15px 26px; border: 1px solid rgba(248,244,236,0.7); font-size: clamp(12.5px, 1.33vw, 14.5px); letter-spacing: 0.2em; text-transform: uppercase; color: #F8F4EC; transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease" style-hover="background:#F1EBE1;color:#1B1815;border-color:#F1EBE1">
@@ -246,13 +253,16 @@
     <div style="font-size: clamp(11.5px, 1.22vw, 14px); letter-spacing: 0.26em; text-transform: uppercase; color: rgba(246,241,232,0.78)">Let's build something great.<div class="footer-contact" style="margin-top: 6px; font-size: clamp(10.5px, 1vw, 12px); letter-spacing: 0.12em; text-transform: none; color: rgba(246,241,232,0.55)">St. George, Utah · <a href="mailto:cailin.justineschirm@gmail.com" style="color: inherit; text-decoration: none">cailin.justineschirm@gmail.com</a></div></div>
     <div style="display: flex; align-items: center; gap: clamp(14px, 2.2vw, 26px)">
       <a href="https://github.com/caijustine" target="_blank" rel="noopener" aria-label="GitHub" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
-        <img src="https://cdn.simpleicons.org/github/F6F1E8" alt="GitHub" style="width: 20px; height: 20px">
+        <img src="/assets/icons/github-F6F1E8.svg" alt="GitHub" style="width: 20px; height: 20px">
+      </a>
+      <a href="https://www.linkedin.com/in/cailin-schirm" target="_blank" rel="noopener me" aria-label="LinkedIn" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#F6F1E8" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"></path></svg>
       </a>
       <a href="https://www.instagram.com/cailinjustine/" target="_blank" rel="noopener me" aria-label="Instagram" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
-        <img src="https://cdn.simpleicons.org/instagram/F6F1E8" alt="Instagram" width="20" height="20" style="width: 20px; height: 20px">
+        <img src="/assets/icons/instagram-F6F1E8.svg" alt="Instagram" width="20" height="20" style="width: 20px; height: 20px">
       </a>
       <a href="https://www.facebook.com/share/1F2pec2N7p/" target="_blank" rel="noopener me" aria-label="Facebook" style="display: flex; opacity: 0.85; transition: opacity 0.15s ease" style-hover="opacity:1">
-        <img src="https://cdn.simpleicons.org/facebook/F6F1E8" alt="Facebook" width="20" height="20" style="width: 20px; height: 20px">
+        <img src="/assets/icons/facebook-F6F1E8.svg" alt="Facebook" width="20" height="20" style="width: 20px; height: 20px">
       </a>
     </div>
   </footer>
